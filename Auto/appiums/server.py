@@ -5,7 +5,7 @@
 @author: LeungJain
 @time: 2018/9/20 16:24
 """
-from Wuto.exception import ExceptionInfo
+from Auto.exception import ExceptionInfo
 
 
 class AppiumServer:

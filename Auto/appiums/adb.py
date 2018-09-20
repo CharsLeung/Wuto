@@ -35,7 +35,7 @@ class adb:
                     udids.append(id[0])
             # x = x[::]
             # x = [i.split('\t')[0] for i in x]
-            print(udids)
+            # print(udids)
             return udids
         except:
             return []
@@ -154,7 +154,7 @@ class adb:
 
 pass
 
-if __name__ == '__main__':
-    # adb.get_devices_udid()
-    # print(adb.packages('46e34325'))
-    print(adb.model('46e34325'))
+# if __name__ == '__main__':
+#     # adb.get_devices_udid()
+#     # print(adb.packages('46e34325'))
+#     print(adb.model('46e34325'))

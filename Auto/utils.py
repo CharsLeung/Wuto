@@ -10,8 +10,8 @@ import warnings
 import time
 # import pygame
 import threading
-from Wuto import project_dir
-from Wuto.exception import ExceptionInfo
+from Auto import project_dir
+from Auto.exception import ExceptionInfo
 
 warnings.filterwarnings('ignore')
 
