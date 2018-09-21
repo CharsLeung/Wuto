@@ -1,15 +1,623 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
-<bookstore>
-
-    <book>
-        <title lang="eng">Harry Potter</title>
-        <price>29.99</price>
-    </book>
-
-    <book>
-        <title lang="eng">Learning XML</title>
-        <price>39.95</price>
-    </book>
-
-</bookstore>
+<?xml version="1.0" encoding="UTF-8"?>
+<hierarchy rotation="0">
+    <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="com.android.systemui"
+                                content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                focusable="true" focused="false" scrollable="false" long-clickable="false"
+                                password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="" instance="0">
+        <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="com.android.systemui"
+                                    content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                                    password="false" selected="false" bounds="[0,0][1080,1920]"
+                                    resource-id="com.android.systemui:id/panel_holder" instance="1">
+            <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
+                                        package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        scrollable="false" long-clickable="false" password="false" selected="false"
+                                        bounds="[0,0][1080,1920]"
+                                        resource-id="com.android.systemui:id/notification_panel" instance="2">
+                <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
+                                            package="com.android.systemui" content-desc="" checkable="false"
+                                            checked="false" clickable="false" enabled="true" focusable="false"
+                                            focused="false" scrollable="false" long-clickable="false" password="false"
+                                            selected="false" bounds="[0,0][1080,1920]"
+                                            resource-id="com.android.systemui:id/notification_container_parent"
+                                            instance="3">
+                    <android.widget.ScrollView index="1" text="" class="android.widget.ScrollView"
+                                               package="com.android.systemui" content-desc="" checkable="false"
+                                               checked="false" clickable="false" enabled="true" focusable="false"
+                                               focused="false" scrollable="false" long-clickable="false"
+                                               password="false" selected="false" bounds="[0,0][1080,1920]"
+                                               resource-id="com.android.systemui:id/scroll_view" instance="0">
+                        <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[0,0][1080,1920]"
+                                                     resource-id="" instance="0">
+                            <android.view.View index="0" text="" class="android.view.View"
+                                               package="com.android.systemui" content-desc="" checkable="false"
+                                               checked="false" clickable="false" enabled="true" focusable="false"
+                                               focused="false" scrollable="false" long-clickable="false"
+                                               password="false" selected="false" bounds="[0,0][1080,6]" resource-id=""
+                                               instance="0"/>
+                        </android.widget.LinearLayout>
+                    </android.widget.ScrollView>
+                </android.widget.FrameLayout>
+                <android.widget.FrameLayout index="1" text="" class="android.widget.FrameLayout"
+                                            package="com.android.systemui" content-desc="" checkable="false"
+                                            checked="false" clickable="false" enabled="true" focusable="false"
+                                            focused="false" scrollable="false" long-clickable="false" password="false"
+                                            selected="false" bounds="[0,0][1080,1920]"
+                                            resource-id="com.android.systemui:id/keyguard_view_container" instance="4">
+                    <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
+                                                package="com.android.systemui" content-desc="" checkable="false"
+                                                checked="false" clickable="false" enabled="true" focusable="false"
+                                                focused="false" scrollable="false" long-clickable="false"
+                                                password="false" selected="false" bounds="[0,0][1080,1920]"
+                                                resource-id="com.android.systemui:id/main_view_container" instance="5">
+                        <android.widget.RelativeLayout index="0" text="" class="android.widget.RelativeLayout"
+                                                       package="com.android.systemui" content-desc="" checkable="false"
+                                                       checked="false" clickable="false" enabled="true"
+                                                       focusable="false" focused="false" scrollable="false"
+                                                       long-clickable="false" password="false" selected="false"
+                                                       bounds="[0,0][1080,1920]" resource-id="" instance="0">
+                            <android.view.View index="0" text="" class="android.view.View"
+                                               package="com.android.systemui" content-desc="" checkable="false"
+                                               checked="false" clickable="false" enabled="true" focusable="false"
+                                               focused="false" scrollable="false" long-clickable="false"
+                                               password="false" selected="false" bounds="[0,0][1080,1920]"
+                                               resource-id="com.android.systemui:id/blur_cover" instance="1"/>
+                            <android.view.View index="2" text="" class="android.view.View"
+                                               package="com.android.systemui" content-desc="" checkable="false"
+                                               checked="false" clickable="false" enabled="true" focusable="false"
+                                               focused="false" scrollable="false" long-clickable="false"
+                                               password="false" selected="false" bounds="[0,0][1080,1920]"
+                                               resource-id="com.android.systemui:id/bg" instance="2"/>
+                        </android.widget.RelativeLayout>
+                    </android.widget.FrameLayout>
+                </android.widget.FrameLayout>
+            </android.widget.FrameLayout>
+        </android.widget.FrameLayout>
+        <android.view.View index="1" text="" class="android.view.View" package="com.android.systemui" content-desc=""
+                           checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+                           focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                           bounds="[0,0][1080,1920]" resource-id="com.android.systemui:id/scrim_behind" instance="3"/>
+        <android.view.View NAF="true" index="2" text="" class="android.view.View" package="com.android.systemui"
+                           content-desc="" checkable="false" checked="false" clickable="true" enabled="true"
+                           focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                           selected="false" bounds="[0,0][1080,1920]"
+                           resource-id="com.android.systemui:id/scrim_in_front" instance="4"/>
+        <android.widget.FrameLayout index="3" text="" class="android.widget.FrameLayout" package="com.android.systemui"
+                                    content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                                    password="false" selected="false" bounds="[0,0][1080,1920]" resource-id=""
+                                    instance="6">
+            <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
+                                        package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        scrollable="false" long-clickable="false" password="false" selected="false"
+                                        bounds="[0,72][1080,1920]"
+                                        resource-id="com.android.systemui:id/keyguard_host_view" instance="7">
+                <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
+                                            package="com.android.systemui" content-desc="" checkable="false"
+                                            checked="false" clickable="false" enabled="true" focusable="false"
+                                            focused="false" scrollable="false" long-clickable="false" password="false"
+                                            selected="false" bounds="[0,72][1080,1920]"
+                                            resource-id="com.android.systemui:id/keyguard_security_container"
+                                            instance="8">
+                    <android.widget.ViewFlipper index="0" text="" class="android.widget.ViewFlipper"
+                                                package="com.android.systemui" content-desc="" checkable="false"
+                                                checked="false" clickable="false" enabled="true" focusable="false"
+                                                focused="false" scrollable="false" long-clickable="false"
+                                                password="false" selected="false" bounds="[0,72][1080,1920]"
+                                                resource-id="com.android.systemui:id/view_flipper" instance="0">
+                        <android.widget.RelativeLayout index="0" text="" class="android.widget.RelativeLayout"
+                                                       package="com.android.systemui" content-desc="PIN码解锁。"
+                                                       checkable="false" checked="false" clickable="false"
+                                                       enabled="true" focusable="false" focused="false"
+                                                       scrollable="false" long-clickable="false" password="false"
+                                                       selected="false" bounds="[0,72][1080,1920]"
+                                                       resource-id="com.android.systemui:id/vivo_pin_view" instance="1">
+                            <android.widget.TextView index="0" text="使用指纹或输入密码" class="android.widget.TextView"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="true" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="true" bounds="[0,732][1080,804]"
+                                                     resource-id="com.android.systemui:id/vivo_message_title"
+                                                     instance="0"/>
+                            <android.widget.TextView NAF="true" index="1" text="" class="android.widget.TextView"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="true" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="true" bounds="[0,804][1080,865]"
+                                                     resource-id="com.android.systemui:id/keyguard_message_area"
+                                                     instance="1"/>
+                            <android.widget.RelativeLayout index="2" text="" class="android.widget.RelativeLayout"
+                                                           package="com.android.systemui" content-desc=""
+                                                           checkable="false" checked="false" clickable="false"
+                                                           enabled="true" focusable="false" focused="false"
+                                                           scrollable="false" long-clickable="false" password="false"
+                                                           selected="false" bounds="[0,886][1080,926]"
+                                                           resource-id="com.android.systemui:id/vivo_area_group"
+                                                           instance="2">
+                                <android.widget.RelativeLayout index="0" text="" class="android.widget.RelativeLayout"
+                                                               package="com.android.systemui" content-desc=""
+                                                               checkable="false" checked="false" clickable="false"
+                                                               enabled="true" focusable="false" focused="false"
+                                                               scrollable="false" long-clickable="false"
+                                                               password="false" selected="false"
+                                                               bounds="[0,886][1080,926]"
+                                                               resource-id="com.android.systemui:id/simple_group"
+                                                               instance="3">
+                                    <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[399,886][439,926]"
+                                                              resource-id="com.android.systemui:id/password1"
+                                                              instance="0"/>
+                                    <android.widget.ImageView index="1" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[399,886][439,926]"
+                                                              resource-id="com.android.systemui:id/password1bg"
+                                                              instance="1"/>
+                                    <android.widget.ImageView index="2" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[481,886][521,926]"
+                                                              resource-id="com.android.systemui:id/password2bg"
+                                                              instance="2"/>
+                                    <android.widget.ImageView index="3" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[481,886][521,926]"
+                                                              resource-id="com.android.systemui:id/password2"
+                                                              instance="3"/>
+                                    <android.widget.ImageView index="4" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[563,886][603,926]"
+                                                              resource-id="com.android.systemui:id/password3bg"
+                                                              instance="4"/>
+                                    <android.widget.ImageView index="5" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[563,886][603,926]"
+                                                              resource-id="com.android.systemui:id/password3"
+                                                              instance="5"/>
+                                    <android.widget.ImageView index="6" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[645,886][685,926]"
+                                                              resource-id="com.android.systemui:id/password4"
+                                                              instance="6"/>
+                                    <android.widget.ImageView index="7" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[645,886][685,926]"
+                                                              resource-id="com.android.systemui:id/password4bg"
+                                                              instance="7"/>
+                                </android.widget.RelativeLayout>
+                            </android.widget.RelativeLayout>
+                            <android.widget.RelativeLayout index="3" text="" class="android.widget.RelativeLayout"
+                                                           package="com.android.systemui" content-desc=""
+                                                           checkable="false" checked="false" clickable="false"
+                                                           enabled="true" focusable="false" focused="false"
+                                                           scrollable="false" long-clickable="false" password="false"
+                                                           selected="false" bounds="[0,1016][1080,1858]" resource-id=""
+                                                           instance="4">
+                                <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                             package="com.android.systemui" content-desc=""
+                                                             checkable="false" checked="false" clickable="false"
+                                                             enabled="true" focusable="false" focused="false"
+                                                             scrollable="false" long-clickable="false" password="false"
+                                                             selected="false" bounds="[0,1016][1080,1858]"
+                                                             resource-id="com.android.systemui:id/keyguard_bouncer_frame"
+                                                             instance="1">
+                                    <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                                 package="com.android.systemui" content-desc=""
+                                                                 checkable="false" checked="false" clickable="false"
+                                                                 enabled="true" focusable="false" focused="false"
+                                                                 scrollable="false" long-clickable="false"
+                                                                 password="false" selected="false"
+                                                                 bounds="[174,1016][904,1202]" resource-id=""
+                                                                 instance="2">
+                                        <android.widget.ImageButton index="0" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="One"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[174,1016][417,1202]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey1"
+                                                                    instance="0"/>
+                                        <android.widget.ImageButton index="1" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Two"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[417,1016][660,1202]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey2"
+                                                                    instance="1"/>
+                                        <android.widget.ImageButton index="2" text="按时" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Three"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[660,1016][904,1202]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey3"
+                                                                    instance="2"/>
+                                    </android.widget.LinearLayout>
+                                    <android.widget.LinearLayout index="1" text="" class="android.widget.LinearLayout"
+                                                                 package="com.android.systemui" content-desc=""
+                                                                 checkable="false" checked="false" clickable="false"
+                                                                 enabled="true" focusable="false" focused="false"
+                                                                 scrollable="false" long-clickable="false"
+                                                                 password="false" selected="false"
+                                                                 bounds="[174,1202][904,1385]" resource-id=""
+                                                                 instance="3">
+                                        <android.widget.ImageButton index="0" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Four"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[174,1202][417,1385]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey4"
+                                                                    instance="3"/>
+                                        <android.widget.ImageButton index="1" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Five"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[417,1202][660,1385]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey5"
+                                                                    instance="4"/>
+                                        <android.widget.ImageButton index="2" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Six"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[660,1202][904,1385]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey6"
+                                                                    instance="5"/>
+                                    </android.widget.LinearLayout>
+                                    <android.widget.LinearLayout index="2" text="" class="android.widget.LinearLayout"
+                                                                 package="com.android.systemui" content-desc=""
+                                                                 checkable="false" checked="false" clickable="false"
+                                                                 enabled="true" focusable="false" focused="false"
+                                                                 scrollable="false" long-clickable="false"
+                                                                 password="false" selected="false"
+                                                                 bounds="[174,1385][904,1568]" resource-id=""
+                                                                 instance="4">
+                                        <android.widget.ImageButton index="0" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Seven"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[174,1385][417,1568]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey7"
+                                                                    instance="6"/>
+                                        <android.widget.ImageButton index="1" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Eight"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[417,1385][660,1568]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey8"
+                                                                    instance="7"/>
+                                        <android.widget.ImageButton index="2" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Nine"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[660,1385][904,1568]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey9"
+                                                                    instance="8"/>
+                                    </android.widget.LinearLayout>
+                                    <android.widget.LinearLayout index="3" text="" class="android.widget.LinearLayout"
+                                                                 package="com.android.systemui" content-desc=""
+                                                                 checkable="false" checked="false" clickable="false"
+                                                                 enabled="true" focusable="false" focused="false"
+                                                                 scrollable="false" long-clickable="false"
+                                                                 password="false" selected="false"
+                                                                 bounds="[174,1568][903,1751]" resource-id=""
+                                                                 instance="5">
+                                        <android.widget.ImageButton index="1" text="" class="android.widget.ImageButton"
+                                                                    package="com.android.systemui" content-desc="Zero"
+                                                                    checkable="false" checked="false" clickable="true"
+                                                                    enabled="true" focusable="true" focused="false"
+                                                                    scrollable="false" long-clickable="false"
+                                                                    password="false" selected="false"
+                                                                    bounds="[417,1568][660,1751]"
+                                                                    resource-id="com.android.systemui:id/VivoPinkey0"
+                                                                    instance="9"/>
+                                    </android.widget.LinearLayout>
+                                    <android.widget.LinearLayout index="4" text="" class="android.widget.LinearLayout"
+                                                                 package="com.android.systemui" content-desc=""
+                                                                 checkable="false" checked="false" clickable="false"
+                                                                 enabled="true" focusable="false" focused="false"
+                                                                 scrollable="false" long-clickable="false"
+                                                                 password="false" selected="false"
+                                                                 bounds="[174,1751][903,1858]" resource-id=""
+                                                                 instance="6">
+                                        <android.widget.Button index="0" text="紧急拨号" class="android.widget.Button"
+                                                               package="com.android.systemui" content-desc=""
+                                                               checkable="false" checked="false" clickable="true"
+                                                               enabled="true" focusable="true" focused="false"
+                                                               scrollable="false" long-clickable="false"
+                                                               password="false" selected="false"
+                                                               bounds="[174,1751][417,1858]"
+                                                               resource-id="com.android.systemui:id/VivoPinEmergency"
+                                                               instance="0"/>
+                                        <android.widget.Button index="2" text="取消" class="android.widget.Button"
+                                                               package="com.android.systemui" content-desc=""
+                                                               checkable="false" checked="false" clickable="true"
+                                                               enabled="true" focusable="true" focused="false"
+                                                               scrollable="false" long-clickable="false"
+                                                               password="false" selected="false"
+                                                               bounds="[660,1751][903,1858]"
+                                                               resource-id="com.android.systemui:id/VivoPinkeydel"
+                                                               instance="1"/>
+                                    </android.widget.LinearLayout>
+                                </android.widget.LinearLayout>
+                            </android.widget.RelativeLayout>
+                        </android.widget.RelativeLayout>
+                    </android.widget.ViewFlipper>
+                </android.widget.FrameLayout>
+            </android.widget.FrameLayout>
+        </android.widget.FrameLayout>
+        <android.widget.FrameLayout index="4" text="" class="android.widget.FrameLayout" package="com.android.systemui"
+                                    content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                                    password="false" selected="false" bounds="[0,0][1080,72]"
+                                    resource-id="com.android.systemui:id/vivo_status_bar" instance="9">
+            <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                         package="com.android.systemui" content-desc="" checkable="false"
+                                         checked="false" clickable="false" enabled="true" focusable="false"
+                                         focused="false" scrollable="false" long-clickable="false" password="false"
+                                         selected="false" bounds="[0,0][1080,72]"
+                                         resource-id="com.android.systemui:id/status_bar_contents" instance="7">
+                <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
+                                            package="com.android.systemui" content-desc="" checkable="false"
+                                            checked="false" clickable="false" enabled="true" focusable="false"
+                                            focused="false" scrollable="false" long-clickable="false" password="false"
+                                            selected="false" bounds="[18,0][534,72]"
+                                            resource-id="com.android.systemui:id/notification_icon_area" instance="10">
+                    <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                 package="com.android.systemui" content-desc="" checkable="false"
+                                                 checked="false" clickable="false" enabled="true" focusable="false"
+                                                 focused="false" scrollable="false" long-clickable="false"
+                                                 password="false" selected="false" bounds="[18,0][534,72]"
+                                                 resource-id="com.android.systemui:id/notification_icon_area_inner"
+                                                 instance="8">
+                        <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[18,0][320,72]"
+                                                     resource-id="com.android.systemui:id/vivo_signal_cluster_left"
+                                                     instance="9">
+                            <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                         package="com.android.systemui" content-desc=""
+                                                         checkable="false" checked="false" clickable="false"
+                                                         enabled="true" focusable="false" focused="false"
+                                                         scrollable="false" long-clickable="false" password="false"
+                                                         selected="false" bounds="[18,0][119,72]"
+                                                         resource-id="com.android.systemui:id/mobile_type_signal_sim1"
+                                                         instance="10">
+                                <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                             package="com.android.systemui" content-desc=""
+                                                             checkable="false" checked="false" clickable="false"
+                                                             enabled="true" focusable="false" focused="false"
+                                                             scrollable="false" long-clickable="false" password="false"
+                                                             selected="false" bounds="[18,0][119,53]"
+                                                             resource-id="com.android.systemui:id/mobile_type_signal_sim1_ps"
+                                                             instance="11">
+                                    <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[18,30][54,53]"
+                                                              resource-id="com.android.systemui:id/mobile_type_sim1_ps"
+                                                              instance="8"/>
+                                    <android.widget.ImageView index="1" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[54,17][119,53]"
+                                                              resource-id="com.android.systemui:id/mobile_signal_sim1_ps"
+                                                              instance="9"/>
+                                </android.widget.LinearLayout>
+                            </android.widget.LinearLayout>
+                            <android.widget.LinearLayout index="1" text="" class="android.widget.LinearLayout"
+                                                         package="com.android.systemui" content-desc=""
+                                                         checkable="false" checked="false" clickable="false"
+                                                         enabled="true" focusable="false" focused="false"
+                                                         scrollable="false" long-clickable="false" password="false"
+                                                         selected="false" bounds="[125,0][209,72]"
+                                                         resource-id="com.android.systemui:id/mobile_type_signal_sim2"
+                                                         instance="12">
+                                <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                             package="com.android.systemui" content-desc=""
+                                                             checkable="false" checked="false" clickable="false"
+                                                             enabled="true" focusable="false" focused="false"
+                                                             scrollable="false" long-clickable="false" password="false"
+                                                             selected="false" bounds="[125,0][209,53]"
+                                                             resource-id="com.android.systemui:id/mobile_type_signal_sim2_ps"
+                                                             instance="13">
+                                    <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[125,30][144,53]"
+                                                              resource-id="com.android.systemui:id/mobile_type_sim2_ps"
+                                                              instance="10"/>
+                                    <android.widget.ImageView index="1" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[144,17][209,53]"
+                                                              resource-id="com.android.systemui:id/mobile_signal_sim2_ps"
+                                                              instance="11"/>
+                                </android.widget.LinearLayout>
+                            </android.widget.LinearLayout>
+                            <android.widget.TextView index="2" text="0.2K/s" class="android.widget.TextView"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[209,0][320,72]"
+                                                     resource-id="com.android.systemui:id/networkspeed" instance="2"/>
+                        </android.widget.LinearLayout>
+                        <android.widget.LinearLayout index="1" text="" class="android.widget.LinearLayout"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[320,0][534,72]"
+                                                     resource-id="com.android.systemui:id/notificationIcons"
+                                                     instance="14">
+                            <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                      package="com.android.systemui" content-desc="" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false"
+                                                      focused="false" scrollable="false" long-clickable="false"
+                                                      password="false" selected="false" bounds="[320,0][362,72]"
+                                                      resource-id="" instance="12"/>
+                            <android.widget.ImageView index="3" text="" class="android.widget.ImageView"
+                                                      package="com.android.systemui" content-desc="已连接 USB 调试"
+                                                      checkable="false" checked="false" clickable="false" enabled="true"
+                                                      focusable="false" focused="false" scrollable="false"
+                                                      long-clickable="false" password="false" selected="false"
+                                                      bounds="[362,0][412,72]" resource-id="" instance="13"/>
+                            <android.widget.ImageView index="4" text="" class="android.widget.ImageView"
+                                                      package="com.android.systemui" content-desc="妈: 睡觉了吗"
+                                                      checkable="false" checked="false" clickable="false" enabled="true"
+                                                      focusable="false" focused="false" scrollable="false"
+                                                      long-clickable="false" password="false" selected="false"
+                                                      bounds="[412,0][468,72]" resource-id="" instance="14"/>
+                            <android.widget.ImageView index="5" text="" class="android.widget.ImageView"
+                                                      package="com.android.systemui"
+                                                      content-desc="systemui.irrelevent.icon" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false"
+                                                      focused="false" scrollable="false" long-clickable="false"
+                                                      password="false" selected="false" bounds="[468,0][521,72]"
+                                                      resource-id="" instance="15"/>
+                        </android.widget.LinearLayout>
+                    </android.widget.LinearLayout>
+                </android.widget.FrameLayout>
+                <android.widget.FrameLayout index="1" text="" class="android.widget.FrameLayout"
+                                            package="com.android.systemui" content-desc="" checkable="false"
+                                            checked="false" clickable="false" enabled="true" focusable="false"
+                                            focused="false" scrollable="false" long-clickable="false" password="false"
+                                            selected="false" bounds="[534,0][546,72]" resource-id="" instance="11"/>
+                <android.widget.LinearLayout index="2" text="" class="android.widget.LinearLayout"
+                                             package="com.android.systemui" content-desc="" checkable="false"
+                                             checked="false" clickable="false" enabled="true" focusable="false"
+                                             focused="false" scrollable="false" long-clickable="false" password="false"
+                                             selected="false" bounds="[546,0][1062,72]"
+                                             resource-id="com.android.systemui:id/system_icon_area" instance="15">
+                    <android.widget.RelativeLayout index="0" text="" class="android.widget.RelativeLayout"
+                                                   package="com.android.systemui" content-desc="" checkable="false"
+                                                   checked="false" clickable="false" enabled="true" focusable="false"
+                                                   focused="false" scrollable="false" long-clickable="false"
+                                                   password="false" selected="false" bounds="[546,0][1062,72]"
+                                                   resource-id="com.android.systemui:id/system_icons" instance="5">
+                        <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[546,0][775,72]"
+                                                     resource-id="com.android.systemui:id/statusIcons" instance="16">
+                            <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                      package="com.android.systemui" content-desc="" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false"
+                                                      focused="false" scrollable="false" long-clickable="false"
+                                                      password="false" selected="false" bounds="[721,1][775,70]"
+                                                      resource-id="" instance="16"/>
+                        </android.widget.LinearLayout>
+                        <android.widget.LinearLayout index="1" text="" class="android.widget.LinearLayout"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[775,0][1062,72]"
+                                                     resource-id="com.android.systemui:id/signal_battery_cluster"
+                                                     instance="17">
+                            <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
+                                                         package="com.android.systemui" content-desc=""
+                                                         checkable="false" checked="false" clickable="false"
+                                                         enabled="true" focusable="false" focused="false"
+                                                         scrollable="false" long-clickable="false" password="false"
+                                                         selected="false" bounds="[775,0][877,72]"
+                                                         resource-id="com.android.systemui:id/vivo_signal_cluster_right"
+                                                         instance="18">
+                                <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                          package="com.android.systemui" content-desc=""
+                                                          checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false"
+                                                          scrollable="false" long-clickable="false" password="false"
+                                                          selected="false" bounds="[781,0][821,72]"
+                                                          resource-id="com.android.systemui:id/volte" instance="17"/>
+                                <android.widget.FrameLayout index="1" text="" class="android.widget.FrameLayout"
+                                                            package="com.android.systemui" content-desc=""
+                                                            checkable="false" checked="false" clickable="false"
+                                                            enabled="true" focusable="false" focused="false"
+                                                            scrollable="false" long-clickable="false" password="false"
+                                                            selected="false" bounds="[827,0][877,72]"
+                                                            resource-id="com.android.systemui:id/wifi_combo"
+                                                            instance="12">
+                                    <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
+                                                              package="com.android.systemui" content-desc=""
+                                                              checkable="false" checked="false" clickable="false"
+                                                              enabled="true" focusable="false" focused="false"
+                                                              scrollable="false" long-clickable="false" password="false"
+                                                              selected="false" bounds="[827,0][877,72]"
+                                                              resource-id="com.android.systemui:id/wifi_signal"
+                                                              instance="18"/>
+                                </android.widget.FrameLayout>
+                            </android.widget.LinearLayout>
+                            <android.widget.TextView index="1" text="100%" class="android.widget.TextView"
+                                                     package="com.android.systemui" content-desc="" checkable="false"
+                                                     checked="false" clickable="false" enabled="true" focusable="false"
+                                                     focused="false" scrollable="false" long-clickable="false"
+                                                     password="false" selected="false" bounds="[877,13][976,58]"
+                                                     resource-id="com.android.systemui:id/battery_level" instance="3"/>
+                            <android.widget.ImageView index="2" text="" class="android.widget.ImageView"
+                                                      package="com.android.systemui" content-desc="Battery 100 percent."
+                                                      checkable="false" checked="false" clickable="false" enabled="true"
+                                                      focusable="false" focused="false" scrollable="false"
+                                                      long-clickable="false" password="false" selected="false"
+                                                      bounds="[976,0][1062,72]"
+                                                      resource-id="com.android.systemui:id/battery" instance="19"/>
+                        </android.widget.LinearLayout>
+                    </android.widget.RelativeLayout>
+                </android.widget.LinearLayout>
+            </android.widget.LinearLayout>
+        </android.widget.FrameLayout>
+    </android.widget.FrameLayout>
+</hierarchy>
