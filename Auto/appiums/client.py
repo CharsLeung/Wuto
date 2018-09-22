@@ -48,6 +48,7 @@ class AppiumClient(threading.Thread):
             dcs['appPackage'] = 'com.android.settings'
             dcs['appActivity'] = 'com.android.settings.Settings'
             dcs['autoLaunch'] = False   # 是否运行上面这个程序
+            dcs['noReset'] = True
             if pfv is not None:
                 dcs['platformVersion'] = pfv
             if dn is not None:
@@ -69,6 +70,22 @@ class AppiumClient(threading.Thread):
         except Exception as e:
             ExceptionInfo(e)
             self.driver = None
+
+    def files_push(self):
+        """
+        把系统主机项目下的文件同步到移动设备上，
+        以便在涉及文件的操作上，确保移动设备上有
+        相应的资源，一般图片是最主要的
+        ::保证Auto项目下的files必须在设备上有一个副本
+        :return:
+        """
+        try:
+            # TODO(): 需要完成
+            self.driver.push_file()
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+            pass
 
     def unlock(self, password):
         """
@@ -101,7 +118,7 @@ class AppiumClient(threading.Thread):
                     # 其数字键盘上不是简单的文字（text），但存在与文字有对应关系的属性
                     # resource-id="com.android.systemui:id/VivoPinkey1" 对应 1
                     # xpath？？
-                    ac.driver.find_element_by_xpath("//*[contains(@resource-id, 'com.android."
+                    self.driver.find_element_by_xpath("//*[contains(@resource-id, 'com.android."
                                                     "systemui:id/VivoPinkey{0}')]".format(i)).click()
                     time.sleep(0.5)
                 return self.driver.is_locked()
@@ -162,10 +179,12 @@ class AppiumClient(threading.Thread):
     def run(self):
         self.press_by_text('微信')
         time.sleep(1)
-        xml = self.driver.page_source
+        # self.press_by_text('通讯录')
+
         self.press_by_text('发现')
         time.sleep(1)
         self.press_by_text('朋友圈')
+        xml = self.driver.page_source
         time.sleep(1)
         for i in range(0, 10):
             self.driver.swipe(start_x=self.size['width'] / 2,
@@ -176,17 +195,33 @@ class AppiumClient(threading.Thread):
             time.sleep(0.5)
         pass
 
+    def get_current_text_element(self):
+        """
+        获取当前页面上的文字元素，
+        在xml中一般以属性列示的，包括text...
+        获取这些元素是为了，判断当前处在哪个页面
+        :return:
+        """
+        try:
+            # 当前页面的xml描述
+            xml = self.driver.page_source
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+        pass
+
     def exit(self):
+        # 所有的操作结束后，应该回到桌面
         self.driver.quit()
 
 
 pass
-if __name__ == '__main__':
-    ids = adb.get_devices_udid()
-    dn = adb.model(ids[0])
-    pks = adb.packages(ids[0])
-    ac = AppiumClient(udid=ids[0], dn=dn)
-    ac.start()
+# if __name__ == '__main__':
+#     ids = adb.get_devices_udid()
+#     dn = adb.model(ids[0])
+#     pks = adb.packages(ids[0])
+#     ac = AppiumClient(udid=ids[0], dn=dn)
+#     ac.start()
     # ac.unlock('2580')
     # ac.press_key(3)
     # ac.driver.find_element_by_name("QQ").click()

@@ -11,6 +11,6 @@ from Auto import project_dir
 
 tree = ET.parse(project_dir + "/Auto/t.xml")
 root = tree.getroot()
-node = root.findall("//*[contains(@text, '按时')]")
+node = root.findall("//android.widget.FrameLayout[@resource-id='com.android.systemui:id/panel_holder']")
 print(node)
 pass

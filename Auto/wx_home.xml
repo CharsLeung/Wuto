@@ -49,7 +49,7 @@
                                                                          package="com.tencent.mm" content-desc=""
                                                                          checkable="false" checked="false"
                                                                          clickable="false" enabled="true"
-                                                                         focusable="true" focused="false"
+                                                                         f ocusable="true" focused="false"
                                                                          scrollable="true" long-clickable="false"
                                                                          password="false" selected="false"
                                                                          bounds="[0,72][1080,1920]"
@@ -2113,6 +2113,7 @@
                                                                               password="false" selected="false"
                                                                               bounds="[732,72][1080,216]" resource-id=""
                                                                               instance="0">
+                                    <!--搜索那个键-->
                                     <android.widget.TextView index="0" text="" class="android.widget.TextView"
                                                              package="com.tencent.mm" content-desc="搜索"
                                                              checkable="false" checked="false" clickable="true"
@@ -2129,6 +2130,7 @@
                                                                    password="false" selected="false"
                                                                    bounds="[876,72][1080,216]" resource-id=""
                                                                    instance="20">
+                                        <!--加号+那个键-->
                                         <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
                                                                   package="com.tencent.mm" content-desc=""
                                                                   checkable="false" checked="false" clickable="false"
