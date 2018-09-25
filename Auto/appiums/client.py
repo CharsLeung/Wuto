@@ -49,6 +49,8 @@ class AppiumClient(threading.Thread):
             dcs['appActivity'] = 'com.android.settings.Settings'
             dcs['autoLaunch'] = False   # 是否运行上面这个程序
             dcs['noReset'] = True
+            dcs["unicodeKeyboard"] = 'True'  # 支持中文输入
+            dcs["resetKeyboard"] = 'True'
             if pfv is not None:
                 dcs['platformVersion'] = pfv
             if dn is not None:
@@ -130,6 +132,70 @@ class AppiumClient(threading.Thread):
             ExceptionInfo(e)
             return False
 
+    def swipe_up(self, duration=1000):
+        """
+        向上滑动屏幕的三分之一, 持续时间1秒
+        屏幕在向下走
+        :return:
+        """
+        try:
+            self.driver.swipe(start_x=self.size['width'] / 2,
+                              start_y=self.size['height'] * 2 / 3,
+                              end_x=self.size['width'] / 2,
+                              end_y=self.size['height'] / 3,
+                              duration=duration)
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
+
+    def swipe_down(self, duration=1000):
+        # 屏幕向上走
+        try:
+            self.driver.swipe(start_x=self.size['width'] / 2,
+                              start_y=self.size['height'] / 3,
+                              end_x=self.size['width'] / 2,
+                              end_y=self.size['height'] * 2 / 3,
+                              duration=duration)
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
+
+    def swipe_right(self, duration=1000):
+        """
+        向右滑动屏幕的二分之一, 持续时间1秒
+        屏幕向左走
+        :return:
+        """
+        try:
+            self.driver.swipe(start_x=self.size['width'] / 2,
+                              start_y=self.size['height'] / 2,
+                              end_x=self.size['width'],
+                              end_y=self.size['height'] / 3,
+                              duration=duration)
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
+
+    def swipe_left(self, duration=1000):
+        """
+        向左滑动屏幕的二分之一, 持续时间1秒
+        屏幕向右走
+        :return:
+        """
+        try:
+            self.driver.swipe(start_x=self.size['width'] / 2,
+                              start_y=self.size['height'] / 2,
+                              end_x=0,
+                              end_y=self.size['height'] / 2,
+                              duration=duration)
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
+
     def open_app_by_name(self, name):
         """
         通过程序名称打开程序，即你在桌面上看到的程序名字
@@ -176,6 +242,14 @@ class AppiumClient(threading.Thread):
         time.sleep(sleep)
         return self.driver
 
+    def press_attribute(self, attr, value):
+        try:
+            self.driver.find_element_by_xpath("//*[contains(@{0}, '{1}')]".
+                                              format(attr, value)).click()
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
     def run(self):
         self.press_by_text('微信')
         time.sleep(1)
@@ -184,7 +258,7 @@ class AppiumClient(threading.Thread):
         self.press_by_text('发现')
         time.sleep(1)
         self.press_by_text('朋友圈')
-        xml = self.driver.page_source
+        # xml = self.driver.page_source
         time.sleep(1)
         for i in range(0, 10):
             self.driver.swipe(start_x=self.size['width'] / 2,
@@ -213,16 +287,14 @@ class AppiumClient(threading.Thread):
     def exit(self):
         # 所有的操作结束后，应该回到桌面
         self.driver.quit()
-
-
 pass
 # if __name__ == '__main__':
 #     ids = adb.get_devices_udid()
 #     dn = adb.model(ids[0])
 #     pks = adb.packages(ids[0])
 #     ac = AppiumClient(udid=ids[0], dn=dn)
-#     ac.start()
-    # ac.unlock('2580')
+# #     ac.start()
+#     ac.unlock('2580')
     # ac.press_key(3)
     # ac.driver.find_element_by_name("QQ").click()
     # ac.driver.find_element(value='[name="%s"]' % '天气').click()

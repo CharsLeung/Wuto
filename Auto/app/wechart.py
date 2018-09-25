@@ -12,12 +12,14 @@ import time
 from Auto.appiums.adb import adb
 from Auto.appiums.client import AppiumClient
 from Auto.exception import ExceptionInfo
+from Auto.utils import Inspector
 
 
 class WeChart(AppiumClient):
     """
     测试微信应用
     """
+
     def open(self):
         """
         打开微信
@@ -88,8 +90,30 @@ class WeChart(AppiumClient):
 
     def photo_share(self):
         try:
+            self.press_by_text('微信')
+            time.sleep(1)
+            self.press_by_text('发现')
+            time.sleep(1)
+            self.press_by_text('朋友圈')
+            time.sleep(0.5)
             # resource-id="com.tencent.mm:id/iw"
-            self.driver.find_element_by_xpath("//*[contains(@content-desc, '拍照分享')]").click()
+            self.press_attribute('content-desc', '拍照分享')
+            time.sleep(0.8)
+            self.press_by_text('从相册选择')
+            time.sleep(0.5)
+            self.press_attribute('content-desc', '图片 1, 2018-09-24 14:17')
+            time.sleep(0.5)
+            self.press_attribute('text', '完成(1/9)')
+            time.sleep(0.5)
+            self.press_attribute('text', '这一刻的想法...')
+            time.sleep(1)
+            self.driver.find_element_by_xpath("//*[contains(@text, '这一刻的想法...')]").send_keys('这是在测试程序，不要在意')
+            time.sleep(2)
+            # self.press_attribute('text', '发表')
+            x = self.driver.page_source
+            print(x)
+            d = Inspector(xmlstring=x).get_attributes()
+            print(d)
             return True
         except Exception as e:
             ExceptionInfo(e)
@@ -103,42 +127,29 @@ class WeChart(AppiumClient):
         except Exception as e:
             ExceptionInfo(e)
             return False
-
-    def swipe_up(self):
+    def add_pyq(self, text, image=None):
         """
-        向上滑动屏幕的三分之一, 持续时间1秒
+        发朋友圈
+        :param text:
+        :param image:
         :return:
         """
         try:
-            self.driver.swipe(start_x=self.size['width'] / 2,
-                              start_y=self.size['height'] * 2 / 3,
-                              end_x=self.size['width'] / 2,
-                              end_y=self.size['height'] / 3,
-                              duration=1000)
-            return True
+            self.press_by_text('微信')
+            time.sleep(1)
+            self.press_by_text('发现')
+            time.sleep(1)
+            self.press_by_text('朋友圈')
+            time.sleep(0.5)
+            self.photo_share()
         except Exception as e:
             ExceptionInfo(e)
-            return False
 
-    def swipe_down(self):
-        try:
-            self.driver.swipe(start_x=self.size['width'] / 2,
-                              start_y=self.size['height'] / 3,
-                              end_x=self.size['width'] / 2,
-                              end_y=self.size['height'] * 2 / 3,
-                              duration=1000)
-            return True
-        except Exception as e:
-            ExceptionInfo(e)
-            return False
+
 
     def run(self):
-        self.open()
-        time.sleep(1)
-        self.search()
-        x = self.driver.page_source
+        self.photo_share()
         pass
-
 
 
 if __name__ == '__main__':

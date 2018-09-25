@@ -67,3 +67,70 @@ def sound_notice(sound_name):
         return t
     except Exception as e:
         ExceptionInfo(e)
+        pass
+
+import pandas as pd
+from xml.etree import ElementTree
+
+
+class Inspector:
+
+    def __init__(self, path=None, xmlstring=None):
+        try:
+            if path is not None:
+                self.tree = ElementTree.parse(path)
+            if xmlstring is not None:
+                self.tree = ElementTree.fromstring(xmlstring)
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+            pass
+
+    def get_attributes(self):
+        try:
+            data = []
+            for element in self.tree.getiterator():
+                dict_keys = {}
+                if element.keys():
+                    for name, value in element.items():
+                        dict_keys[name] = value
+                    # print(dict_keys)
+                    data.append(dict_keys)
+            data = pd.DataFrame(data)
+            return data
+        except Exception as e:
+            ExceptionInfo(e)
+
+    def find_attribute_key(self, value):
+        """
+        通过值找到属性名
+        :param value:
+        :return:
+        """
+        try:
+            data = []
+            for element in self.tree.getiterator():
+                if element.keys():
+                    for k, v in element.items():
+                        if v == value:
+                            data.append({k: v})
+            return data
+        except Exception as e:
+            ExceptionInfo(e)
+
+    def find_attribute_value(self, key):
+        """
+        通过属性名找到值
+        :param value:
+        :return:
+        """
+        try:
+            data = []
+            for element in self.tree.getiterator():
+                if element.keys():
+                    for k, v in element.items():
+                        if k == key:
+                            data.append({k: v})
+            return data
+        except Exception as e:
+            ExceptionInfo(e)
