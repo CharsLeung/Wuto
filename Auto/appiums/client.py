@@ -7,6 +7,7 @@
 """
 import time
 import threading
+import base64
 from appium import webdriver
 from Auto.appiums.adb import adb
 from Auto.exception import ExceptionInfo
@@ -32,7 +33,7 @@ class AppiumClient(threading.Thread):
     KEYCODE_VOLUME_DOWN = 25
 
     def __init__(self, host='127.0.0.1', port=4723, pfn='Android',
-                 pfv=None, dn=None, nct=240, udid=None):
+                 pfv=None, dn=None, nct=240, udid=None, **kwargs):
         """
         创建一个客服端实例
         """
@@ -48,9 +49,16 @@ class AppiumClient(threading.Thread):
             dcs['appPackage'] = 'com.android.settings'
             dcs['appActivity'] = 'com.android.settings.Settings'
             dcs['autoLaunch'] = False   # 是否运行上面这个程序
-            dcs['noReset'] = True
+            # 有关中文的输入会有奇怪的问题
+            # 一般配置如下两个参数，在OPPO、vivo上会不断提示安装程序
+            # 解决这个问题可以参考https://blog.csdn.net/oneofJava/article/details/81462831
+            # 但是这样操作之后又不能输入中文了
+            # C:\Users\Administrator\AppData\Local\Programs\Appium\resources\
+            # app\node_modules\appium\node_modules\appium-android-ime\bin\UnicodeIME-debug.apk
+            # 手动安装这个app，然后再修改文件，可以解决
             dcs["unicodeKeyboard"] = 'True'  # 支持中文输入
             dcs["resetKeyboard"] = 'True'
+            dcs['noReset'] = True
             if pfv is not None:
                 dcs['platformVersion'] = pfv
             if dn is not None:
@@ -68,12 +76,13 @@ class AppiumClient(threading.Thread):
             # if self.lock:
             #     self.driver.unlock() # 如果有密码，此函数解不了锁
             print(self.driver.get_window_size())
+            self.kwargs = kwargs
             pass
         except Exception as e:
             ExceptionInfo(e)
             self.driver = None
 
-    def files_push(self):
+    def files_push(self, src, dst):
         """
         把系统主机项目下的文件同步到移动设备上，
         以便在涉及文件的操作上，确保移动设备上有
@@ -83,10 +92,16 @@ class AppiumClient(threading.Thread):
         """
         try:
             # TODO(): 需要完成
-            self.driver.push_file()
+            with open(src, 'rb') as f:
+                d = base64.b64encode(f.read())
+                d = str(d, encoding='utf-8')
+                print(d)
+                self.driver.push_file(dst, d)
+            return True
             pass
         except Exception as e:
             ExceptionInfo(e)
+            return False
             pass
 
     def unlock(self, password):
@@ -250,23 +265,21 @@ class AppiumClient(threading.Thread):
         except Exception as e:
             ExceptionInfo(e)
             return False
-    def run(self):
-        self.press_by_text('微信')
-        time.sleep(1)
-        # self.press_by_text('通讯录')
 
-        self.press_by_text('发现')
-        time.sleep(1)
-        self.press_by_text('朋友圈')
-        # xml = self.driver.page_source
-        time.sleep(1)
-        for i in range(0, 10):
-            self.driver.swipe(start_x=self.size['width'] / 2,
-                              start_y=self.size['height'] * 2 / 3,
-                              end_x=self.size['width'] / 2,
-                              end_y=self.size['height'] / 3,
-                              duration=1000)
-            time.sleep(0.5)
+    def input_text(self, attr, value, text):
+        """
+        通过属性键值对，选择输入框进行文字输入
+        :return:
+        """
+        try:
+            self.driver.find_element_by_xpath("//*[contains(@{0}, '{1}')]".
+                                              format(attr, value)).send_keys(text )
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
+
+    def run(self):
         pass
 
     def get_current_text_element(self):

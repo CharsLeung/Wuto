@@ -101,19 +101,20 @@ class WeChart(AppiumClient):
             time.sleep(0.8)
             self.press_by_text('从相册选择')
             time.sleep(0.5)
-            self.press_attribute('content-desc', '图片 1, 2018-09-24 14:17')
+            x = self.driver.page_source
+            d = Inspector(xmlstring=x).get_attributes()
+            print(d)
+            # 选择图片
+            self.press_attribute('content-desc', '图片 1, 2018-09-25 22:48')
             time.sleep(0.5)
             self.press_attribute('text', '完成(1/9)')
             time.sleep(0.5)
             self.press_attribute('text', '这一刻的想法...')
             time.sleep(1)
-            self.driver.find_element_by_xpath("//*[contains(@text, '这一刻的想法...')]").send_keys('这是在测试程序，不要在意')
+            self.input_text('text', '这一刻的想法...', '这是在测试程序，不要在意')
             time.sleep(2)
             # self.press_attribute('text', '发表')
-            x = self.driver.page_source
-            print(x)
-            d = Inspector(xmlstring=x).get_attributes()
-            print(d)
+
             return True
         except Exception as e:
             ExceptionInfo(e)
@@ -148,13 +149,15 @@ class WeChart(AppiumClient):
 
 
     def run(self):
-        self.photo_share()
+        # self.photo_share()
+        self.files_push('D:\PythonFile\Wuto\\files\\46e34325\image\camera.png',
+                        'sdcard/46e34325/image/camera.png')
         pass
 
 
-if __name__ == '__main__':
-    ids = adb.get_devices_udid()
-    dn = adb.model(ids[0])
-    pks = adb.packages(ids[0])
-    ac = WeChart(udid=ids[0], dn=dn)
-    ac.start()
+# if __name__ == '__main__':
+#     ids = adb.get_devices_udid()
+#     dn = adb.model(ids[0])
+#     pks = adb.packages(ids[0])
+#     ac = WeChart(udid=ids[0], dn=dn)
+#     ac.start()
