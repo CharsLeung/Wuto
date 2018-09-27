@@ -12,7 +12,7 @@ import pandas as pd
 
 from Auto.app.wechart import WeChart
 from Auto.appiums.adb import adb
-from Auto.utils import File
+from Auto.utils import File, logger
 from Auto import project_dir
 
 
@@ -21,6 +21,19 @@ class Action():
         self.udids = adb.get_devices_udid()
 
         pass
+
+    def connect_wifi(self):
+        devices = pd.read_excel(io=project_dir + '\\files\\device.xlsx',
+                               encoding='gbk')
+        print(devices)
+        for i, d in devices.iterrows():
+            if d.UDID in self.udids:
+                # ……
+                ac = WeChart(udid=d.UDID, dn=adb.model(d.UDID),
+                             wifi_name=d['WIFI网络'], wifi_password=d['WIFI密码'])
+                ac.start()
+            else:
+                logger.error_info_print('设备：'+d.UDID+'，未连接！！！')
 
     def run(self):
         phones = pd.read_excel(io=project_dir + '\\files\\auto.xlsx',
@@ -40,4 +53,4 @@ class Action():
                 pass
 
 pass
-Action().run()
+Action().connect_wifi()

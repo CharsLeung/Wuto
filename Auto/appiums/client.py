@@ -9,8 +9,10 @@ import time
 import threading
 import base64
 from appium import webdriver
+from Auto import project_dir
 from Auto.appiums.adb import adb
 from Auto.exception import ExceptionInfo
+from Auto.utils import read_json, Inspector, isin, fontcolor, logger
 
 
 class AppiumClient(threading.Thread):
@@ -59,12 +61,14 @@ class AppiumClient(threading.Thread):
             dcs["unicodeKeyboard"] = 'True'  # 支持中文输入
             dcs["resetKeyboard"] = 'True'
             dcs['noReset'] = True
+            dcs['deviceName'] = 'unnamed' if dn is None else dn
             if pfv is not None:
                 dcs['platformVersion'] = pfv
-            if dn is not None:
-                dcs['deviceName'] = dn
             if udid is not None:
+                self.udid = udid
                 dcs['udid'] = udid
+                self.button = read_json(project_dir +
+                                        '\\files\\{}\\button_config.json'.format(udid))
             self.driver = webdriver.Remote('http://{0}:{1}/wd/hub'
                                            .format(host, port), dcs)
             time.sleep(2)
@@ -75,12 +79,22 @@ class AppiumClient(threading.Thread):
             self.size = self.driver.get_window_size()
             # if self.lock:
             #     self.driver.unlock() # 如果有密码，此函数解不了锁
-            print(self.driver.get_window_size())
+            # print(self.driver.get_window_size())
             self.kwargs = kwargs
+            logger.success_info_print('The device{} client create success.'
+                  .format('' if udid is None else ' ' + udid))
             pass
         except Exception as e:
             ExceptionInfo(e)
             self.driver = None
+
+    def back_home(self):
+        try:
+            self.driver.keyevent(3)
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
 
     def files_push(self, src, dst):
         """
@@ -92,6 +106,7 @@ class AppiumClient(threading.Thread):
         """
         try:
             # TODO(): 需要完成
+            # 这个方法不好用
             with open(src, 'rb') as f:
                 d = base64.b64encode(f.read())
                 d = str(d, encoding='utf-8')
@@ -209,6 +224,52 @@ class AppiumClient(threading.Thread):
             return True
         except Exception as e:
             ExceptionInfo(e)
+            return False
+
+    def connect_wifi(self, name, password):
+        """
+        连接WiFi
+        :param name:
+        :param password:
+        :return:
+        """
+        try:
+            # 手机已经打开WiFi了
+            if self.open_app_by_activity('com.android.settings',
+                                         'com.android.settings.Settings'):
+                self.press_attribute('text', self.button['WLAN'])
+                time.sleep(1)
+                self.press_attribute('text', name)
+                time.sleep(0.5)
+                d = Inspector(xmlstring=self.driver.page_source).get_attributes()
+                # print(d)
+                keys = d.text.tolist()
+                if  isin('已连接',  keys):
+                    # 已连接
+                    self.press_attribute('text', '取消')
+                    time.sleep(0.5)
+                    self.back_home()
+                    return True
+                elif isin(['忘记网络', '连接'],  keys):
+                    # 以前连接过
+                    self.press_attribute('text', '连接')
+                    time.sleep(0.5)
+                    self.back_home()
+                    return True
+                else:
+                    self.input_text('text', '密码', password)
+                    time.sleep(2)
+                    self.press_attribute('text', '连接')
+                    time.sleep(5)
+                    self.back_home()
+                    # 不会检查是否连接成功了没有
+                    return True
+            else:
+                return False
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+            self.back_home()
             return False
 
     def open_app_by_name(self, name):

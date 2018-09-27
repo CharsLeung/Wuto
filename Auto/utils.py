@@ -10,6 +10,7 @@ import warnings
 import time
 # import pygame
 import threading
+
 from Auto import project_dir
 from Auto.exception import ExceptionInfo
 
@@ -69,12 +70,12 @@ def sound_notice(sound_name):
         ExceptionInfo(e)
         pass
 
+
 import pandas as pd
 from xml.etree import ElementTree
 
 
 class Inspector:
-
     def __init__(self, path=None, xmlstring=None):
         try:
             if path is not None:
@@ -236,3 +237,53 @@ class File:
             # 如果目录存在则不创建，并提示目录已存在
             # print(path + ' 目录已存在')
             return False
+
+
+import json
+
+
+def read_json(path):
+    """读取交易参数"""
+    try:
+        with open(path, encoding='utf-8') as file:
+            content = json.load(file)
+        return content
+    except Exception as e:
+        ExceptionInfo(e)
+        return None
+
+
+def modify_json(path, data):
+    try:
+        with open(path, 'w') as file:
+            file.write(json.dumps(data))
+        return True
+    except Exception as e:
+        ExceptionInfo(e)
+        return False
+
+def isin(sub, collection):
+    if isinstance(sub, list):
+        return set(sub) <= set(collection)
+    else:
+        return sub in collection
+
+# print(isin(1, ['a', 'b', 'c']))
+class logger:
+    @classmethod
+    def success_info_print(cls, info):
+        n = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        info = n + '=>' + str(info)
+        print(fontcolor.F_GREEN, info, fontcolor.END)
+
+    @classmethod
+    def error_info_print(cls, info):
+        n = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        info = n + '=>' + str(info)
+        print(fontcolor.F_RED, info, fontcolor.END)
+
+    @classmethod
+    def warn_info_print(cls, info):
+        n = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        info = n + '=>' + str(info)
+        print(fontcolor.F_YELLOW, info, fontcolor.END)

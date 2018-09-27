@@ -11,6 +11,9 @@
 import os
 import re
 
+from Auto.exception import ExceptionInfo
+
+
 class adb:
     """
     常见adb命令的Python实现，
@@ -51,7 +54,7 @@ class adb:
         :return:
         """
         try:
-            cmd = 'adb {0} push {1} /{2}/'.\
+            cmd = 'adb {0} push {1} {2}'.\
                 format('' if udid is None else '-s ' + udid, pc_path, mb_path)
             os.popen(cmd)
             return True
@@ -150,7 +153,39 @@ class adb:
             return None
             pass
 
+    @classmethod
+    def get_device_mac(cls, udid):
+        """
+        获取设备的MAC地址
+        :param udid:
+        :return:
+        """
+        try:
+            cmd = 'adb -s {udid} shell cat /sys/class/net/wlan0/address'.\
+                format(udid=udid)
+            r = os.popen(cmd).read().strip().replace('\n', '')
+            return r
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+            return None
 
+    @classmethod
+    def get_wifi_password(cls, udid):
+        """
+                获取设备的MAC地址
+                :param udid:
+                :return:
+                """
+        try:
+            cmd = 'adb -s {udid} shell cat /data/misc/wifi/*.conf'. \
+                format(udid=udid)
+            r = os.popen(cmd).read().strip().replace('\n', '')
+            return r
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+            return None
 
 pass
 
@@ -158,3 +193,4 @@ pass
 #     # adb.get_devices_udid()
 #     # print(adb.packages('46e34325'))
 #     print(adb.model('46e34325'))
+# print(adb.get_wifi_password('46e34325'))

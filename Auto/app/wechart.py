@@ -150,8 +150,12 @@ class WeChart(AppiumClient):
 
     def run(self):
         # self.photo_share()
-        self.files_push('D:\PythonFile\Wuto\\files\\46e34325\image\camera.png',
-                        'sdcard/46e34325/image/camera.png')
+        # self.files_push('D:\PythonFile\Wuto\\files\\46e34325\image\camera1.png',
+        #                 'sdcard/46e34325/image/camera1.png')
+        # adb.push('D:\PythonFile\Wuto\\files\\46e34325\image\camera1.png',
+        #          '/sdcard/46e34325/image/camera1.png', self.udid)
+        self.connect_wifi(self.kwargs['wifi_name'],
+                          self.kwargs['wifi_password'])
         pass
 
 
