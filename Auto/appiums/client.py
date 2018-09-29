@@ -272,6 +272,46 @@ class AppiumClient(threading.Thread):
             self.back_home()
             return False
 
+    def add_contactors(self):
+        """
+        添加联系人
+        :return:
+        """
+        try:
+            # 打开联系人
+            self.open_app_by_activity('com.android.contacts',
+                                      'com.android.contacts.activities.PeopleActivity')
+            # print(self.kwargs['contactors'])
+            time.sleep(1)
+            # TODO(leung): 右上角那个+号：NAF=true
+            # d = Inspector(xmlstring=self.driver.page_source).get_attributes()
+            # print(d)
+            for d in self.kwargs['contactors']:
+                try:
+                    self.press_attribute('NAF', 'true')
+                    time.sleep(1)
+                    self.press_attribute('text', '手机')
+                    time.sleep(0.5)
+                    self.input_text('text', '姓名', d['联系人'])
+                    time.sleep(1)
+                    # 联系人输入之后可能会出现询问是否合并的对话框
+                    # 这时候点击顶部的‘新建联系人’忽略提示‘
+                    self.press_attribute('text', '新建联系人')
+                    time.sleep(0.5)
+                    self.input_text('text', '电话', d['联系电话'])
+                    time.sleep(1)
+                    self.press_attribute('text', '完成')
+                    time.sleep(1)
+                    logger.success_info_print(self.udid + ': 联系人({0},{1}), 创建成功.'
+                                              .format(d['联系人'], d['联系电话']))
+                except Exception as e:
+                    ExceptionInfo(e)
+                    logger.error_info_print(self.udid + ': 联系人({0},{1}), 创建失败.'
+                                              .format(d['联系人'], d['联系电话']))
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+
     def open_app_by_name(self, name):
         """
         通过程序名称打开程序，即你在桌面上看到的程序名字
