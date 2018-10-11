@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hierarchy rotation="0">
     <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="com.tencent.mm"
-                                content-desc="当前所在页面,与飞阿子的聊天" checkable="false" checked="false" clickable="false"
+                                content-desc="当前所在页面,与的聊天" checkable="false" checked="false" clickable="false"
                                 enabled="true" focusable="false" focused="false" scrollable="false"
                                 long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]"
                                 resource-id="" instance="0">
@@ -14,7 +14,7 @@
                                          content-desc="" checkable="false" checked="false" clickable="false"
                                          enabled="true" focusable="false" focused="false" scrollable="false"
                                          long-clickable="false" password="false" selected="false"
-                                         bounds="[0,0][1080,1920]" resource-id="com.tencent.mm:id/bf" instance="0">
+                                         bounds="[0,0][1080,1920]" resource-id="com.tencent.mm:id/bg" instance="0">
                 <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
                                             package="com.tencent.mm" content-desc="" checkable="false" checked="false"
                                             clickable="false" enabled="true" focusable="false" focused="false"
@@ -24,7 +24,7 @@
                                        content-desc="" checkable="false" checked="false" clickable="false"
                                        enabled="true" focusable="false" focused="false" scrollable="false"
                                        long-clickable="false" password="false" selected="false"
-                                       bounds="[0,72][1080,1920]" resource-id="com.tencent.mm:id/ic" instance="0">
+                                       bounds="[0,72][1080,1920]" resource-id="com.tencent.mm:id/ih" instance="0">
                         <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
                                                     package="com.tencent.mm" content-desc="" checkable="false"
                                                     checked="false" clickable="false" enabled="true" focusable="false"
@@ -36,7 +36,7 @@
                                                         checked="false" clickable="false" enabled="true"
                                                         focusable="false" focused="false" scrollable="false"
                                                         long-clickable="false" password="false" selected="false"
-                                                        bounds="[0,72][1080,1920]" resource-id="com.tencent.mm:id/ccq"
+                                                        bounds="[0,72][1080,1920]" resource-id="com.tencent.mm:id/cpu"
                                                         instance="4">
                                 <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
                                                             package="com.tencent.mm" content-desc="" checkable="false"
@@ -49,11 +49,11 @@
                                                                          package="com.tencent.mm" content-desc=""
                                                                          checkable="false" checked="false"
                                                                          clickable="false" enabled="true"
-                                                                         f ocusable="true" focused="false"
+                                                                         focusable="true" focused="false"
                                                                          scrollable="true" long-clickable="false"
                                                                          password="false" selected="false"
                                                                          bounds="[0,72][1080,1920]"
-                                                                         resource-id="com.tencent.mm:id/b8z"
+                                                                         resource-id="com.tencent.mm:id/bfd"
                                                                          instance="0">
                                         <android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout"
                                                                     package="com.tencent.mm" content-desc=""
@@ -62,7 +62,7 @@
                                                                     scrollable="false" long-clickable="false"
                                                                     password="false" selected="false"
                                                                     bounds="[0,72][1080,1920]"
-                                                                    resource-id="com.tencent.mm:id/cgo" instance="6">
+                                                                    resource-id="com.tencent.mm:id/cv1" instance="6">
                                             <android.widget.RelativeLayout index="0" text=""
                                                                            class="android.widget.RelativeLayout"
                                                                            package="com.tencent.mm" content-desc=""
@@ -72,7 +72,7 @@
                                                                            scrollable="false" long-clickable="false"
                                                                            password="false" selected="false"
                                                                            bounds="[0,72][1080,1920]"
-                                                                           resource-id="com.tencent.mm:id/cce"
+                                                                           resource-id="com.tencent.mm:id/cpi"
                                                                            instance="0">
                                                 <android.widget.ListView index="0" text=""
                                                                          class="android.widget.ListView"
@@ -83,10 +83,9 @@
                                                                          scrollable="true" long-clickable="true"
                                                                          password="false" selected="false"
                                                                          bounds="[0,216][1080,1920]"
-                                                                         resource-id="com.tencent.mm:id/ccf"
+                                                                         resource-id="com.tencent.mm:id/cpj"
                                                                          instance="0">
-                                                    <!--聊天列表-->
-                                                    <android.widget.LinearLayout index="0" text=""
+                                                    <android.widget.LinearLayout index="8" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -96,7 +95,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,216][1080,408]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="1">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -120,8 +119,20 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,239][186,383]"
-                                                                                      resource-id="com.tencent.mm:id/np"
+                                                                                      resource-id="com.tencent.mm:id/ok"
                                                                                       instance="0"/>
+                                                            <android.widget.ImageView index="1" text=""
+                                                                                      class="android.widget.ImageView"
+                                                                                      package="com.tencent.mm"
+                                                                                      content-desc="" checkable="false"
+                                                                                      checked="false" clickable="false"
+                                                                                      enabled="true" focusable="false"
+                                                                                      focused="false" scrollable="false"
+                                                                                      long-clickable="false"
+                                                                                      password="false" selected="false"
+                                                                                      bounds="[168,230][198,260]"
+                                                                                      resource-id="com.tencent.mm:id/azk"
+                                                                                      instance="1"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -149,7 +160,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,247][1038,312]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="3">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -168,7 +179,7 @@
                                                                                              bounds="[222,247][843,312]"
                                                                                              resource-id=""
                                                                                              instance="4">
-                                                                    <android.view.View index="0" text="飞阿子"
+                                                                    <android.view.View index="0" text="订阅号"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -179,10 +190,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,247][843,312]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="1"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="23:33"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -192,7 +203,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,247][1038,291]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="2"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -228,7 +239,8 @@
                                                                                              bounds="[222,319][918,371]"
                                                                                              resource-id=""
                                                                                              instance="6">
-                                                                    <android.view.View index="0" text="[视频]"
+                                                                    <android.view.View index="0"
+                                                                                       text="重庆交大就业:一对一职业咨询，开始啦"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -239,7 +251,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,319][918,371]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="3"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -262,7 +274,7 @@
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="1" text=""
+                                                    <android.widget.LinearLayout index="9" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -272,7 +284,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,408][1080,600]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="8">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -296,8 +308,20 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,431][186,575]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="1"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="2"/>
+                                                            <android.widget.ImageView index="1" text=""
+                                                                                      class="android.widget.ImageView"
+                                                                                      package="com.tencent.mm"
+                                                                                      content-desc="" checkable="false"
+                                                                                      checked="false" clickable="false"
+                                                                                      enabled="true" focusable="false"
+                                                                                      focused="false" scrollable="false"
+                                                                                      long-clickable="false"
+                                                                                      password="false" selected="false"
+                                                                                      bounds="[168,422][198,452]"
+                                                                                      resource-id="com.tencent.mm:id/azk"
+                                                                                      instance="3"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -325,7 +349,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,439][1038,504]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="10">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -344,7 +368,7 @@
                                                                                              bounds="[222,439][843,504]"
                                                                                              resource-id=""
                                                                                              instance="11">
-                                                                    <android.view.View index="0" text="春"
+                                                                    <android.view.View index="0" text="JQData学习使用群3"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -355,10 +379,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,439][843,504]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="4"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="23:32"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -368,7 +392,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,439][1038,483]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="5"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -404,7 +428,8 @@
                                                                                              bounds="[222,511][918,563]"
                                                                                              resource-id=""
                                                                                              instance="13">
-                                                                    <android.view.View index="0" text="[视频]"
+                                                                    <android.view.View index="0"
+                                                                                       text="屮山老Larry: 今天买跌一点仓位"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -415,7 +440,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,511][918,563]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="6"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -434,11 +459,29 @@
                                                                                              selected="false"
                                                                                              bounds="[918,504][1038,570]"
                                                                                              resource-id=""
-                                                                                             instance="14"/>
+                                                                                             instance="14">
+                                                                    <android.widget.ImageView index="0" text=""
+                                                                                              class="android.widget.ImageView"
+                                                                                              package="com.tencent.mm"
+                                                                                              content-desc=""
+                                                                                              checkable="false"
+                                                                                              checked="false"
+                                                                                              clickable="false"
+                                                                                              enabled="true"
+                                                                                              focusable="false"
+                                                                                              focused="false"
+                                                                                              scrollable="false"
+                                                                                              long-clickable="false"
+                                                                                              password="false"
+                                                                                              selected="false"
+                                                                                              bounds="[981,507][1038,567]"
+                                                                                              resource-id="com.tencent.mm:id/azp"
+                                                                                              instance="4"/>
+                                                                </android.widget.LinearLayout>
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="2" text=""
+                                                    <android.widget.LinearLayout index="10" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -448,7 +491,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,600][1080,792]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="15">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -472,20 +515,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,623][186,767]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="2"/>
-                                                            <android.widget.ImageView index="1" text=""
-                                                                                      class="android.widget.ImageView"
-                                                                                      package="com.tencent.mm"
-                                                                                      content-desc="" checkable="false"
-                                                                                      checked="false" clickable="false"
-                                                                                      enabled="true" focusable="false"
-                                                                                      focused="false" scrollable="false"
-                                                                                      long-clickable="false"
-                                                                                      password="false" selected="false"
-                                                                                      bounds="[168,614][198,644]"
-                                                                                      resource-id="com.tencent.mm:id/auk"
-                                                                                      instance="3"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="5"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -513,7 +544,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,631][1038,696]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="17">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -532,7 +563,7 @@
                                                                                              bounds="[222,631][843,696]"
                                                                                              resource-id=""
                                                                                              instance="18">
-                                                                    <android.view.View index="0" text="订阅号"
+                                                                    <android.view.View index="0" text="二爹"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -543,10 +574,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,631][843,696]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="7"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="23:17"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -556,7 +587,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,631][1038,675]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="8"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -592,8 +623,7 @@
                                                                                              bounds="[222,703][918,755]"
                                                                                              resource-id=""
                                                                                              instance="20">
-                                                                    <android.view.View index="0"
-                                                                                       text="黑马公社:把小姐姐放到通知栏，这才…"
+                                                                    <android.view.View index="0" text="我发信息给他了"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -604,7 +634,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,703][918,755]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="9"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -627,7 +657,7 @@
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="3" text=""
+                                                    <android.widget.LinearLayout index="11" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -637,7 +667,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,792][1080,984]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="22">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -661,20 +691,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,815][186,959]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="4"/>
-                                                            <android.widget.TextView index="1" text="1"
-                                                                                     class="android.widget.TextView"
-                                                                                     package="com.tencent.mm"
-                                                                                     content-desc="" checkable="false"
-                                                                                     checked="false" clickable="false"
-                                                                                     enabled="true" focusable="false"
-                                                                                     focused="false" scrollable="false"
-                                                                                     long-clickable="false"
-                                                                                     password="false" selected="false"
-                                                                                     bounds="[144,803][201,860]"
-                                                                                     resource-id="com.tencent.mm:id/lg"
-                                                                                     instance="0"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="6"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -702,7 +720,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,823][1038,888]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="24">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -721,7 +739,7 @@
                                                                                              bounds="[222,823][843,888]"
                                                                                              resource-id=""
                                                                                              instance="25">
-                                                                    <android.view.View index="0" text="妈"
+                                                                    <android.view.View index="0" text="自家人"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -732,10 +750,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,823][843,888]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="10"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="21:56"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -745,7 +763,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,823][1038,867]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="11"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -781,7 +799,7 @@
                                                                                              bounds="[222,895][918,947]"
                                                                                              resource-id=""
                                                                                              instance="27">
-                                                                    <android.view.View index="0" text="睡觉了吗"
+                                                                    <android.view.View index="0" text="梁司机:[视频]"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -792,7 +810,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,895][918,947]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="12"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -811,11 +829,29 @@
                                                                                              selected="false"
                                                                                              bounds="[918,888][1038,954]"
                                                                                              resource-id=""
-                                                                                             instance="28"/>
+                                                                                             instance="28">
+                                                                    <android.widget.ImageView index="0" text=""
+                                                                                              class="android.widget.ImageView"
+                                                                                              package="com.tencent.mm"
+                                                                                              content-desc=""
+                                                                                              checkable="false"
+                                                                                              checked="false"
+                                                                                              clickable="false"
+                                                                                              enabled="true"
+                                                                                              focusable="false"
+                                                                                              focused="false"
+                                                                                              scrollable="false"
+                                                                                              long-clickable="false"
+                                                                                              password="false"
+                                                                                              selected="false"
+                                                                                              bounds="[981,891][1038,951]"
+                                                                                              resource-id="com.tencent.mm:id/azp"
+                                                                                              instance="7"/>
+                                                                </android.widget.LinearLayout>
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="4" text=""
+                                                    <android.widget.LinearLayout index="12" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -825,7 +861,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,984][1080,1176]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="29">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -849,20 +885,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,1007][186,1151]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="5"/>
-                                                            <android.widget.TextView index="1" text="2"
-                                                                                     class="android.widget.TextView"
-                                                                                     package="com.tencent.mm"
-                                                                                     content-desc="" checkable="false"
-                                                                                     checked="false" clickable="false"
-                                                                                     enabled="true" focusable="false"
-                                                                                     focused="false" scrollable="false"
-                                                                                     long-clickable="false"
-                                                                                     password="false" selected="false"
-                                                                                     bounds="[144,995][201,1052]"
-                                                                                     resource-id="com.tencent.mm:id/lg"
-                                                                                     instance="1"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="8"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -890,7 +914,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,1015][1038,1080]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="31">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -909,7 +933,7 @@
                                                                                              bounds="[222,1015][843,1080]"
                                                                                              resource-id=""
                                                                                              instance="32">
-                                                                    <android.view.View index="0" text="微信支付"
+                                                                    <android.view.View index="0" text="大众家居生活馆13996124…"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -920,10 +944,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1015][843,1080]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="13"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="19:02"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -933,7 +957,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,1015][1038,1059]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="14"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -969,7 +993,8 @@
                                                                                              bounds="[222,1087][918,1139]"
                                                                                              resource-id=""
                                                                                              instance="34">
-                                                                    <android.view.View index="0" text="微信支付凭证"
+                                                                    <android.view.View index="0"
+                                                                                       text="可，提前打电话13996124959"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -980,7 +1005,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1087][918,1139]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="15"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -1003,7 +1028,7 @@
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="5" text=""
+                                                    <android.widget.LinearLayout index="13" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -1013,7 +1038,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,1176][1080,1368]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="36">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -1037,20 +1062,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,1199][186,1343]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="6"/>
-                                                            <android.widget.ImageView index="1" text=""
-                                                                                      class="android.widget.ImageView"
-                                                                                      package="com.tencent.mm"
-                                                                                      content-desc="" checkable="false"
-                                                                                      checked="false" clickable="false"
-                                                                                      enabled="true" focusable="false"
-                                                                                      focused="false" scrollable="false"
-                                                                                      long-clickable="false"
-                                                                                      password="false" selected="false"
-                                                                                      bounds="[168,1190][198,1220]"
-                                                                                      resource-id="com.tencent.mm:id/auk"
-                                                                                      instance="7"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="9"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -1078,7 +1091,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,1207][1038,1272]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="38">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -1097,7 +1110,7 @@
                                                                                              bounds="[222,1207][843,1272]"
                                                                                              resource-id=""
                                                                                              instance="39">
-                                                                    <android.view.View index="0" text="哥俩帮"
+                                                                    <android.view.View index="0" text="重庆就业"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1108,10 +1121,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1207][843,1272]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="16"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="18:13"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -1121,7 +1134,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,1207][1038,1251]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="17"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -1157,7 +1170,8 @@
                                                                                              bounds="[222,1279][918,1331]"
                                                                                              resource-id=""
                                                                                              instance="41">
-                                                                    <android.view.View index="0" text="[63条] 向宗洪: 噢"
+                                                                    <android.view.View index="0"
+                                                                                       text="2018年只剩下最后一个季度了..........…"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1168,7 +1182,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1279][918,1331]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="18"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -1187,29 +1201,11 @@
                                                                                              selected="false"
                                                                                              bounds="[918,1272][1038,1338]"
                                                                                              resource-id=""
-                                                                                             instance="42">
-                                                                    <android.widget.ImageView index="0" text=""
-                                                                                              class="android.widget.ImageView"
-                                                                                              package="com.tencent.mm"
-                                                                                              content-desc=""
-                                                                                              checkable="false"
-                                                                                              checked="false"
-                                                                                              clickable="false"
-                                                                                              enabled="true"
-                                                                                              focusable="false"
-                                                                                              focused="false"
-                                                                                              scrollable="false"
-                                                                                              long-clickable="false"
-                                                                                              password="false"
-                                                                                              selected="false"
-                                                                                              bounds="[981,1275][1038,1335]"
-                                                                                              resource-id="com.tencent.mm:id/aup"
-                                                                                              instance="8"/>
-                                                                </android.widget.LinearLayout>
+                                                                                             instance="42"/>
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="6" text=""
+                                                    <android.widget.LinearLayout index="14" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -1219,7 +1215,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,1368][1080,1560]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="43">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -1243,8 +1239,20 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,1391][186,1535]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="9"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="10"/>
+                                                            <android.widget.TextView index="1" text="20"
+                                                                                     class="android.widget.TextView"
+                                                                                     package="com.tencent.mm"
+                                                                                     content-desc="" checkable="false"
+                                                                                     checked="false" clickable="false"
+                                                                                     enabled="true" focusable="false"
+                                                                                     focused="false" scrollable="false"
+                                                                                     long-clickable="false"
+                                                                                     password="false" selected="false"
+                                                                                     bounds="[144,1379][201,1436]"
+                                                                                     resource-id="com.tencent.mm:id/lu"
+                                                                                     instance="0"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -1272,7 +1280,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,1399][1038,1464]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="45">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -1302,10 +1310,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1399][843,1464]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="19"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="17:47"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -1315,7 +1323,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,1399][1038,1443]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="20"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -1352,7 +1360,7 @@
                                                                                              resource-id=""
                                                                                              instance="48">
                                                                     <android.view.View index="0"
-                                                                                       text="26岁女孩34斤 获帮助吃今年第一顿饭"
+                                                                                       text="51岁男女相识7天闪婚 新娘美如少女"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1363,7 +1371,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1471][918,1523]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="21"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -1386,7 +1394,7 @@
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="7" text=""
+                                                    <android.widget.LinearLayout index="15" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -1396,7 +1404,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,1560][1080,1752]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="50">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -1420,20 +1428,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,1583][186,1727]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="10"/>
-                                                            <android.widget.TextView index="1" text="1"
-                                                                                     class="android.widget.TextView"
-                                                                                     package="com.tencent.mm"
-                                                                                     content-desc="" checkable="false"
-                                                                                     checked="false" clickable="false"
-                                                                                     enabled="true" focusable="false"
-                                                                                     focused="false" scrollable="false"
-                                                                                     long-clickable="false"
-                                                                                     password="false" selected="false"
-                                                                                     bounds="[144,1571][201,1628]"
-                                                                                     resource-id="com.tencent.mm:id/lg"
-                                                                                     instance="2"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="11"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -1461,7 +1457,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,1591][1038,1656]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="52">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -1480,7 +1476,8 @@
                                                                                              bounds="[222,1591][843,1656]"
                                                                                              resource-id=""
                                                                                              instance="53">
-                                                                    <android.view.View index="0" text="知乎"
+                                                                    <android.view.View index="0"
+                                                                                       text="lxlx_"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1491,10 +1488,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1591][843,1656]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="22"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="17:36"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -1504,7 +1501,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,1591][1038,1635]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="23"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -1537,11 +1534,10 @@
                                                                                              long-clickable="false"
                                                                                              password="false"
                                                                                              selected="false"
-                                                                                             bounds="[222,1663][918,1715]"
+                                                                                             bounds="[222,1662][918,1715]"
                                                                                              resource-id=""
                                                                                              instance="55">
-                                                                    <android.view.View index="0"
-                                                                                       text="在中国，英语口语流利能带来多少额…"
+                                                                    <android.view.View index="0" text="好的[OK]"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1551,8 +1547,8 @@
                                                                                        scrollable="false"
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
-                                                                                       bounds="[222,1663][918,1715]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       bounds="[222,1662][918,1715]"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="24"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -1575,7 +1571,7 @@
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
                                                     </android.widget.LinearLayout>
-                                                    <android.widget.LinearLayout index="8" text=""
+                                                    <android.widget.LinearLayout index="16" text=""
                                                                                  class="android.widget.LinearLayout"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -1585,7 +1581,7 @@
                                                                                  long-clickable="true" password="false"
                                                                                  selected="false"
                                                                                  bounds="[0,1752][1080,1920]"
-                                                                                 resource-id="com.tencent.mm:id/auj"
+                                                                                 resource-id="com.tencent.mm:id/azj"
                                                                                  instance="57">
                                                         <android.widget.RelativeLayout index="0" text=""
                                                                                        class="android.widget.RelativeLayout"
@@ -1609,8 +1605,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[42,1775][186,1919]"
-                                                                                      resource-id="com.tencent.mm:id/np"
-                                                                                      instance="11"/>
+                                                                                      resource-id="com.tencent.mm:id/ok"
+                                                                                      instance="12"/>
                                                             <android.widget.ImageView index="1" text=""
                                                                                       class="android.widget.ImageView"
                                                                                       package="com.tencent.mm"
@@ -1621,8 +1617,8 @@
                                                                                       long-clickable="false"
                                                                                       password="false" selected="false"
                                                                                       bounds="[168,1766][198,1796]"
-                                                                                      resource-id="com.tencent.mm:id/auk"
-                                                                                      instance="12"/>
+                                                                                      resource-id="com.tencent.mm:id/azk"
+                                                                                      instance="13"/>
                                                         </android.widget.RelativeLayout>
                                                         <android.widget.LinearLayout index="1" text=""
                                                                                      class="android.widget.LinearLayout"
@@ -1650,7 +1646,7 @@
                                                                                          password="false"
                                                                                          selected="false"
                                                                                          bounds="[222,1783][1038,1848]"
-                                                                                         resource-id="com.tencent.mm:id/aus"
+                                                                                         resource-id="com.tencent.mm:id/azs"
                                                                                          instance="59">
                                                                 <android.widget.LinearLayout index="0" text=""
                                                                                              class="android.widget.LinearLayout"
@@ -1669,7 +1665,7 @@
                                                                                              bounds="[222,1783][843,1848]"
                                                                                              resource-id=""
                                                                                              instance="60">
-                                                                    <android.view.View index="0" text="JQData学习使用群3"
+                                                                    <android.view.View index="0" text="哥俩帮"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1680,10 +1676,10 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1783][843,1848]"
-                                                                                       resource-id="com.tencent.mm:id/aul"
+                                                                                       resource-id="com.tencent.mm:id/azl"
                                                                                        instance="25"/>
                                                                 </android.widget.LinearLayout>
-                                                                <android.view.View index="1" text="16:52"
+                                                                <android.view.View index="1" text="昨天"
                                                                                    class="android.view.View"
                                                                                    package="com.tencent.mm"
                                                                                    content-desc="" checkable="false"
@@ -1693,7 +1689,7 @@
                                                                                    long-clickable="false"
                                                                                    password="false" selected="false"
                                                                                    bounds="[843,1783][1038,1827]"
-                                                                                   resource-id="com.tencent.mm:id/aum"
+                                                                                   resource-id="com.tencent.mm:id/azm"
                                                                                    instance="26"/>
                                                             </android.widget.LinearLayout>
                                                             <android.widget.LinearLayout index="1" text=""
@@ -1729,7 +1725,7 @@
                                                                                              bounds="[222,1855][918,1907]"
                                                                                              resource-id=""
                                                                                              instance="62">
-                                                                    <android.view.View index="0" text="[18条] kk: 好滴"
+                                                                    <android.view.View index="0" text="向宗洪: [无聊]"
                                                                                        class="android.view.View"
                                                                                        package="com.tencent.mm"
                                                                                        content-desc="" checkable="false"
@@ -1740,7 +1736,7 @@
                                                                                        long-clickable="false"
                                                                                        password="false" selected="false"
                                                                                        bounds="[222,1855][918,1907]"
-                                                                                       resource-id="com.tencent.mm:id/aun"
+                                                                                       resource-id="com.tencent.mm:id/azn"
                                                                                        instance="27"/>
                                                                 </android.widget.LinearLayout>
                                                                 <android.widget.LinearLayout index="1" text=""
@@ -1775,8 +1771,8 @@
                                                                                               password="false"
                                                                                               selected="false"
                                                                                               bounds="[981,1851][1038,1911]"
-                                                                                              resource-id="com.tencent.mm:id/aup"
-                                                                                              instance="13"/>
+                                                                                              resource-id="com.tencent.mm:id/azp"
+                                                                                              instance="14"/>
                                                                 </android.widget.LinearLayout>
                                                             </android.widget.LinearLayout>
                                                         </android.widget.LinearLayout>
@@ -1785,7 +1781,6 @@
                                             </android.widget.RelativeLayout>
                                         </android.widget.FrameLayout>
                                     </com.tencent.mm.ui.mogic.WxViewPager>
-                                    <!--微信主界面底部的4个按钮（微信、通讯录、发现、我）-->
                                     <android.widget.RelativeLayout index="1" text=""
                                                                    class="android.widget.RelativeLayout"
                                                                    package="com.tencent.mm" content-desc=""
@@ -1794,7 +1789,7 @@
                                                                    scrollable="false" long-clickable="false"
                                                                    password="false" selected="false"
                                                                    bounds="[0,1758][1080,1920]"
-                                                                   resource-id="com.tencent.mm:id/bg" instance="10">
+                                                                   resource-id="com.tencent.mm:id/bh" instance="10">
                                         <android.widget.LinearLayout index="0" text=""
                                                                      class="android.widget.LinearLayout"
                                                                      package="com.tencent.mm" content-desc=""
@@ -1804,7 +1799,6 @@
                                                                      password="false" selected="false"
                                                                      bounds="[0,1758][1080,1920]" resource-id=""
                                                                      instance="64">
-                                            <!--微信主界面底部的4个按钮（微信、通讯录、发现、我）-->
                                             <android.widget.RelativeLayout index="0" text=""
                                                                            class="android.widget.RelativeLayout"
                                                                            package="com.tencent.mm" content-desc=""
@@ -1824,7 +1818,7 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[0,1773][270,1905]"
-                                                                             resource-id="com.tencent.mm:id/chn"
+                                                                             resource-id="com.tencent.mm:id/cw0"
                                                                              instance="65">
                                                     <android.widget.RelativeLayout index="0" text=""
                                                                                    class="android.widget.RelativeLayout"
@@ -1847,9 +1841,9 @@
                                                                                   long-clickable="false"
                                                                                   password="false" selected="false"
                                                                                   bounds="[87,1773][183,1857]"
-                                                                                  resource-id="com.tencent.mm:id/op"
-                                                                                  instance="14"/>
-                                                        <android.widget.TextView index="1" text="10"
+                                                                                  resource-id="com.tencent.mm:id/po"
+                                                                                  instance="15"/>
+                                                        <android.widget.TextView index="1" text="29"
                                                                                  class="android.widget.TextView"
                                                                                  package="com.tencent.mm"
                                                                                  content-desc="" checkable="false"
@@ -1859,8 +1853,8 @@
                                                                                  long-clickable="false" password="false"
                                                                                  selected="false"
                                                                                  bounds="[155,1773][212,1830]"
-                                                                                 resource-id="com.tencent.mm:id/cho"
-                                                                                 instance="3"/>
+                                                                                 resource-id="com.tencent.mm:id/cw1"
+                                                                                 instance="1"/>
                                                     </android.widget.RelativeLayout>
                                                     <android.widget.TextView index="1" text="微信"
                                                                              class="android.widget.TextView"
@@ -1871,8 +1865,8 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[99,1857][171,1905]"
-                                                                             resource-id="com.tencent.mm:id/chp"
-                                                                             instance="4"/>
+                                                                             resource-id="com.tencent.mm:id/cw2"
+                                                                             instance="2"/>
                                                 </android.widget.LinearLayout>
                                             </android.widget.RelativeLayout>
                                             <android.widget.RelativeLayout index="1" text=""
@@ -1894,7 +1888,7 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[270,1773][540,1905]"
-                                                                             resource-id="com.tencent.mm:id/chn"
+                                                                             resource-id="com.tencent.mm:id/cw0"
                                                                              instance="66">
                                                     <android.widget.RelativeLayout index="0" text=""
                                                                                    class="android.widget.RelativeLayout"
@@ -1917,8 +1911,8 @@
                                                                                   long-clickable="false"
                                                                                   password="false" selected="false"
                                                                                   bounds="[357,1773][453,1857]"
-                                                                                  resource-id="com.tencent.mm:id/op"
-                                                                                  instance="15"/>
+                                                                                  resource-id="com.tencent.mm:id/po"
+                                                                                  instance="16"/>
                                                     </android.widget.RelativeLayout>
                                                     <android.widget.TextView index="1" text="通讯录"
                                                                              class="android.widget.TextView"
@@ -1929,8 +1923,8 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[351,1857][459,1905]"
-                                                                             resource-id="com.tencent.mm:id/chp"
-                                                                             instance="5"/>
+                                                                             resource-id="com.tencent.mm:id/cw2"
+                                                                             instance="3"/>
                                                 </android.widget.LinearLayout>
                                             </android.widget.RelativeLayout>
                                             <android.widget.RelativeLayout index="2" text=""
@@ -1952,7 +1946,7 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[540,1773][810,1905]"
-                                                                             resource-id="com.tencent.mm:id/chn"
+                                                                             resource-id="com.tencent.mm:id/cw0"
                                                                              instance="67">
                                                     <android.widget.RelativeLayout index="0" text=""
                                                                                    class="android.widget.RelativeLayout"
@@ -1975,8 +1969,20 @@
                                                                                   long-clickable="false"
                                                                                   password="false" selected="false"
                                                                                   bounds="[627,1773][723,1857]"
-                                                                                  resource-id="com.tencent.mm:id/op"
-                                                                                  instance="16"/>
+                                                                                  resource-id="com.tencent.mm:id/po"
+                                                                                  instance="17"/>
+                                                        <android.widget.ImageView index="1" text=""
+                                                                                  class="android.widget.ImageView"
+                                                                                  package="com.tencent.mm"
+                                                                                  content-desc="" checkable="false"
+                                                                                  checked="false" clickable="false"
+                                                                                  enabled="true" focusable="false"
+                                                                                  focused="false" scrollable="false"
+                                                                                  long-clickable="false"
+                                                                                  password="false" selected="false"
+                                                                                  bounds="[701,1776][731,1806]"
+                                                                                  resource-id="com.tencent.mm:id/j2"
+                                                                                  instance="18"/>
                                                     </android.widget.RelativeLayout>
                                                     <android.widget.TextView index="1" text="发现"
                                                                              class="android.widget.TextView"
@@ -1987,8 +1993,8 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[639,1857][711,1905]"
-                                                                             resource-id="com.tencent.mm:id/chp"
-                                                                             instance="6"/>
+                                                                             resource-id="com.tencent.mm:id/cw2"
+                                                                             instance="4"/>
                                                 </android.widget.LinearLayout>
                                             </android.widget.RelativeLayout>
                                             <android.widget.RelativeLayout index="3" text=""
@@ -2010,7 +2016,7 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[810,1773][1080,1905]"
-                                                                             resource-id="com.tencent.mm:id/chn"
+                                                                             resource-id="com.tencent.mm:id/cw0"
                                                                              instance="68">
                                                     <android.widget.RelativeLayout index="0" text=""
                                                                                    class="android.widget.RelativeLayout"
@@ -2033,8 +2039,8 @@
                                                                                   long-clickable="false"
                                                                                   password="false" selected="false"
                                                                                   bounds="[897,1773][993,1857]"
-                                                                                  resource-id="com.tencent.mm:id/op"
-                                                                                  instance="17"/>
+                                                                                  resource-id="com.tencent.mm:id/po"
+                                                                                  instance="19"/>
                                                     </android.widget.RelativeLayout>
                                                     <android.widget.TextView index="1" text="我"
                                                                              class="android.widget.TextView"
@@ -2045,8 +2051,8 @@
                                                                              scrollable="false" long-clickable="false"
                                                                              password="false" selected="false"
                                                                              bounds="[927,1857][963,1905]"
-                                                                             resource-id="com.tencent.mm:id/chp"
-                                                                             instance="7"/>
+                                                                             resource-id="com.tencent.mm:id/cw2"
+                                                                             instance="5"/>
                                                 </android.widget.LinearLayout>
                                             </android.widget.RelativeLayout>
                                         </android.widget.LinearLayout>
@@ -2054,25 +2060,24 @@
                                 </android.widget.FrameLayout>
                             </android.widget.FrameLayout>
                         </android.widget.FrameLayout>
-                        <!--顶部的那几个导航-->
                         <android.widget.FrameLayout index="1" text="" class="android.widget.FrameLayout"
                                                     package="com.tencent.mm" content-desc="" checkable="false"
                                                     checked="false" clickable="false" enabled="true" focusable="false"
                                                     focused="false" scrollable="false" long-clickable="false"
                                                     password="false" selected="false" bounds="[0,72][1080,216]"
-                                                    resource-id="com.tencent.mm:id/id" instance="7">
+                                                    resource-id="com.tencent.mm:id/ii" instance="7">
                             <android.view.View index="0" text="" class="android.view.View" package="com.tencent.mm"
                                                content-desc="" checkable="false" checked="false" clickable="false"
                                                enabled="true" focusable="false" focused="false" scrollable="false"
                                                long-clickable="false" password="false" selected="false"
-                                               bounds="[0,72][1080,216]" resource-id="com.tencent.mm:id/ie"
+                                               bounds="[0,72][1080,216]" resource-id="com.tencent.mm:id/ij"
                                                instance="28">
                                 <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
                                                              package="com.tencent.mm" content-desc="" checkable="false"
                                                              checked="false" clickable="true" enabled="true"
                                                              focusable="false" focused="false" scrollable="false"
                                                              long-clickable="false" password="false" selected="false"
-                                                             bounds="[0,72][732,216]" resource-id="com.tencent.mm:id/jh"
+                                                             bounds="[0,72][732,216]" resource-id="com.tencent.mm:id/jm"
                                                              instance="69">
                                     <android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout"
                                                                  package="com.tencent.mm" content-desc=""
@@ -2089,17 +2094,17 @@
                                                                        focusable="false" focused="false"
                                                                        scrollable="false" long-clickable="false"
                                                                        password="false" selected="false"
-                                                                       bounds="[0,108][251,180]" resource-id=""
+                                                                       bounds="[0,108][256,180]" resource-id=""
                                                                        instance="19">
-                                            <android.widget.TextView index="0" text="微信(10)"
+                                            <android.widget.TextView index="0" text="微信(29)"
                                                                      class="android.widget.TextView"
                                                                      package="com.tencent.mm" content-desc=""
                                                                      checkable="false" checked="false" clickable="false"
                                                                      enabled="true" focusable="false" focused="false"
                                                                      scrollable="false" long-clickable="false"
                                                                      password="false" selected="false"
-                                                                     bounds="[42,108][251,180]"
-                                                                     resource-id="android:id/text1" instance="8"/>
+                                                                     bounds="[42,108][256,180]"
+                                                                     resource-id="android:id/text1" instance="6"/>
                                         </android.widget.RelativeLayout>
                                     </android.widget.LinearLayout>
                                 </android.widget.LinearLayout>
@@ -2113,14 +2118,13 @@
                                                                               password="false" selected="false"
                                                                               bounds="[732,72][1080,216]" resource-id=""
                                                                               instance="0">
-                                    <!--搜索那个键-->
                                     <android.widget.TextView index="0" text="" class="android.widget.TextView"
                                                              package="com.tencent.mm" content-desc="搜索"
                                                              checkable="false" checked="false" clickable="true"
                                                              enabled="true" focusable="true" focused="false"
                                                              scrollable="false" long-clickable="true" password="false"
                                                              selected="false" bounds="[732,72][876,216]" resource-id=""
-                                                             instance="9"/>
+                                                             instance="7"/>
                                     <android.widget.RelativeLayout index="1" text=""
                                                                    class="android.widget.RelativeLayout"
                                                                    package="com.tencent.mm" content-desc="更多功能按钮"
@@ -2130,7 +2134,6 @@
                                                                    password="false" selected="false"
                                                                    bounds="[876,72][1080,216]" resource-id=""
                                                                    instance="20">
-                                        <!--加号+那个键-->
                                         <android.widget.ImageView index="0" text="" class="android.widget.ImageView"
                                                                   package="com.tencent.mm" content-desc=""
                                                                   checkable="false" checked="false" clickable="false"
@@ -2138,7 +2141,7 @@
                                                                   scrollable="false" long-clickable="false"
                                                                   password="false" selected="false"
                                                                   bounds="[942,108][1014,180]"
-                                                                  resource-id="com.tencent.mm:id/hp" instance="18"/>
+                                                                  resource-id="com.tencent.mm:id/hu" instance="20"/>
                                     </android.widget.RelativeLayout>
                                 </android.support.v7.widget.LinearLayoutCompat>
                             </android.view.View>

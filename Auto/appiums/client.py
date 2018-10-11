@@ -12,7 +12,8 @@ from appium import webdriver
 from Auto import project_dir
 from Auto.appiums.adb import adb
 from Auto.exception import ExceptionInfo
-from Auto.utils import read_json, Inspector, isin, fontcolor, logger
+from Auto.utils import read_json, Inspector, isin, fontcolor, logger, \
+    page_diff
 
 
 class AppiumClient(threading.Thread):
@@ -165,7 +166,6 @@ class AppiumClient(threading.Thread):
     def swipe_up(self, duration=1000):
         """
         向上滑动屏幕的三分之一, 持续时间1秒
-        屏幕在向下走
         :return:
         """
         try:
@@ -194,15 +194,14 @@ class AppiumClient(threading.Thread):
 
     def swipe_right(self, duration=1000):
         """
-        向右滑动屏幕的二分之一, 持续时间1秒
-        屏幕向左走
+        向右滑动屏幕的二分之一, 持续时间1秒 ->
         :return:
         """
         try:
             self.driver.swipe(start_x=self.size['width'] / 2,
                               start_y=self.size['height'] / 2,
-                              end_x=self.size['width'],
-                              end_y=self.size['height'] / 3,
+                              end_x=self.size['width'] - 1,
+                              end_y=self.size['height'] / 2,
                               duration=duration)
             return True
         except Exception as e:
@@ -218,7 +217,7 @@ class AppiumClient(threading.Thread):
         try:
             self.driver.swipe(start_x=self.size['width'] / 2,
                               start_y=self.size['height'] / 2,
-                              end_x=0,
+                              end_x=1,
                               end_y=self.size['height'] / 2,
                               duration=duration)
             return True
@@ -320,12 +319,59 @@ class AppiumClient(threading.Thread):
         try:
             # 一般很可能会出现一种状况：当前页面上没有这个程序，可能需要
             # 滑动桌面，这种方式只能从桌面启动
-            self.driver.find_element_by_xpath("//*[contains(@text, '{}')]".
-                                              format(name)).click()
-            pass
+            # 1. 检查当前桌面上是否有name
+            f = False
+            last_page = ' '  # record last page's xml
+            for i in range(0, 10):
+                x = self.driver.page_source
+                if name in x:
+                    f = True
+                    break
+                else:
+                    # 判断当前页面跟上一个是否是一样的, ratio>0.95认为是同一页面
+                    ratio = page_diff(last_page, x)
+                    if ratio < 0.95:
+                        self.swipe_left()
+                        last_page = x
+                    else:
+                        # 同一页面
+                        break
+                    time.sleep(0.5)
+            if f:
+                # find
+                _ = self.press_by_text(name)
+                # time.sleep(1)
+                # d = Inspector(xmlstring=self.driver.page_source).get_attributes()
+                # print(d)
+                return _
+            else:
+                self.back_home()
+                time.sleep(0.5)
+                for i in range(0, 10):
+                    x = self.driver.page_source
+                    if name in x:
+                        f = True
+                        break
+                    else:
+                        ratio = page_diff(last_page, x)
+                        if ratio < 0.95:
+                            self.swipe_right()
+                            last_page = x
+                        else:
+                            # 同一页面
+                            break
+                        time.sleep(0.5)
+                if f:
+                    # find
+                    time.sleep(0.5)
+                    return self.press_by_text(name)
+                else:
+                    logger.warn_info_print('not find this app: {}'.format(name))
+                    return False
         except Exception as e:
             ExceptionInfo(e)
-        pass
+            logger.error_info_print('open application of {} filed.'.format(name))
+            return False
 
     def open_app_by_activity(self, app_package, app_activity):
         try:
@@ -375,6 +421,17 @@ class AppiumClient(threading.Thread):
         try:
             self.driver.find_element_by_xpath("//*[contains(@{0}, '{1}')]".
                                               format(attr, value)).send_keys(text )
+            return True
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
+
+    def open_notifications(self):
+        """
+        :return:
+        """
+        try:
+            self.driver.open_notifications()
             return True
         except Exception as e:
             ExceptionInfo(e)

@@ -12,7 +12,7 @@ import time
 from Auto.appiums.adb import adb
 from Auto.appiums.client import AppiumClient
 from Auto.exception import ExceptionInfo
-from Auto.scheduler import TASK
+from Auto.app import WX_APP_TASK, SYS_APP_TASK
 from Auto.utils import Inspector, logger
 
 
@@ -23,13 +23,15 @@ class WeChat(AppiumClient):
     def open(self, name='微信'):
         """
         打开微信
+        微信有可能存在多开，那么桌面上可能存在多个微信应用，
+        此时就通过，不同的微信程序名称，打开微信
         :return:
         """
-        # 通过包名打开，适用于官方安装的微信
-        # return self.open_app_by_activity('com.tencent.mm',
-        #                                  'com.tencent.mm.ui.LauncherUI')
-        # 点击桌面上的“微信”
-        return self.press_by_text(name)
+        try:
+           return self.open_app_by_name(name)
+        except Exception as e:
+            ExceptionInfo(e)
+            return False
 
     def login(self):
         pass
@@ -42,8 +44,9 @@ class WeChat(AppiumClient):
         """
         try:
             # open wechat
-            if self.appName is not None:
-                self.press_by_text(self.appName)
+            appName = self.kwargs['appName']
+            if appName is not None:
+                self.press_by_text(appName)
             else:
                 logger.warn_info_print('invalid appName, and this client is returned.')
                 return
@@ -53,7 +56,18 @@ class WeChat(AppiumClient):
             print(self.driver.page_source)
             d = Inspector(xmlstring=self.driver.page_source).get_attributes()
             print(d)
+            _ = ''
+            for i in d.text.tolist():
+                if '微信号' in i:
+                    _ = i
+                    break
+            self.press_by_text(_)
+            time.sleep(0.5)
             if item == '头像':
+                self.press_by_text('头像')
+                pass
+            elif item == '昵称':
+                self.press_by_text('头像')
                 pass
         except Exception as e:
             ExceptionInfo(e)
@@ -176,21 +190,26 @@ class WeChat(AppiumClient):
             ExceptionInfo(e)
 
     def run(self):
-        # self.photo_share()
-        # self.files_push('D:\PythonFile\Wuto\\files\\46e34325\image\camera1.png',
-        #                 'sdcard/46e34325/image/camera1.png')
-        # adb.push('D:\PythonFile\Wuto\\files\\46e34325\image\camera1.png',
-        #          '/sdcard/46e34325/image/camera1.png', self.udid)
-        if self.kwargs['task'] == TASK['connect_wifi']:
-            self.connect_wifi(self.kwargs['wifi_name'],
-                              self.kwargs['wifi_password'])
-        elif self.kwargs['task'] == TASK['add_contactors']:
-            self.add_contactors()
-        elif self.kwargs['task'] == TASK['modify_personal_details']:
-            self.modify_personal_details(self.kwargs['modify_item'])
-        else:
-            logger.warn_info_print('no valid task for run.')
-        pass
+        try:
+            # self.photo_share()
+            # self.files_push('D:\PythonFile\Wuto\\files\\46e34325\image\camera1.png',
+            #                 'sdcard/46e34325/image/camera1.png')
+            # adb.push('D:\PythonFile\Wuto\\files\\46e34325\image\camera1.png',
+            #          '/sdcard/46e34325/image/camera1.png', self.udid)
+            if self.kwargs['task'] == SYS_APP_TASK['connect_wifi']:
+                self.connect_wifi(self.kwargs['wifi_name'],
+                                  self.kwargs['wifi_password'])
+            elif self.kwargs['task'] == SYS_APP_TASK['add_contactors']:
+                self.add_contactors()
+            elif self.kwargs['task'] == WX_APP_TASK['modify_personal_details']:
+                self.modify_personal_details(self.kwargs['modify_item'])
+            else:
+                logger.warn_info_print('no valid task for run.')
+            pass
+        except Exception as e:
+            ExceptionInfo(e)
+        finally:
+            self.exit()
 
 
 # if __name__ == '__main__':

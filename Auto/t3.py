@@ -26,6 +26,21 @@ from Auto import project_dir
 #         data.append(dict_keys)
 # data = pd.DataFrame(data)
 # print(data)
+# from Auto.utils import Inspector
+# print(Inspector(path=project_dir + "/Auto/wx_search.xml").find_attribute_key('搜索'))
+# print('wx' in 'qwefwc')
 from Auto.utils import Inspector
-print(Inspector(path=project_dir + "/Auto/wx_search.xml").find_attribute_key('搜索'))
+import re
+d = Inspector(path='D:\PythonFile\Wuto\Auto\wx_home.xml').get_attributes()
+a = d.loc[:, ['bounds', 'text']]
+d.groupby(['resource-id'], as_index=False).agg({'text': lambda x: list(x),'index':'count'})
+a = a[a.text != '']
+a['bounds'] = a.bounds.astype('str')
+a['bounds'] = a.bounds.map(lambda x: x[1:len(x)-1].replace('][', ',').split(','))
+print(d)
+# xs = str(open('D:\PythonFile\Wuto\Auto\wx_home.xml','rb').read())
+# print(xs)
+# xs = 'xad_&5535d7;&#56473;&lt;qss'
+# _ = re.compile(r'&.[a-zA-Z0-9]+;').findall(xs)
+# print(_)
 pass

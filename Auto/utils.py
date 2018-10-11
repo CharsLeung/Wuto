@@ -10,7 +10,12 @@ import warnings
 import time
 # import pygame
 import threading
-
+import os
+import shutil
+import zipfile
+import json
+import difflib
+import re
 from Auto import project_dir
 from Auto.exception import ExceptionInfo
 
@@ -78,10 +83,23 @@ from xml.etree import ElementTree
 class Inspector:
     def __init__(self, path=None, xmlstring=None):
         try:
-            if path is not None:
+            # TODO(leung): xml文档中含有'&'符号需要特别注意
+            # 只能解析&lt; <  &gt; >   &amp; &  &quot; "  &apos; '
+            # 除此之外带有&的都是一些特殊符号转义过来的，xml解析不了
+            # 一些特殊的字符通常会被翻译成&#+数字|字母
+
+            if path is not None and isinstance(path, str):
+                # 这种方式不能处理xml中的非法字符
                 self.tree = ElementTree.parse(path)
-            if xmlstring is not None:
-                self.tree = ElementTree.fromstring(xmlstring)
+            if xmlstring is not None and isinstance(xmlstring, str):
+                xs = xmlstring
+                special = ['&lt;', '&gt;', '&amp;', '&quot;', '&apos;']
+                _ = re.compile(r'&.[a-zA-Z0-9]+;').findall(xs)
+                for s in _:
+                    if s not in special:
+                        # 这是一个非法的字符
+                        xs = xs.replace(s, '??')
+                self.tree = ElementTree.fromstring(xs)
             pass
         except Exception as e:
             ExceptionInfo(e)
@@ -135,11 +153,6 @@ class Inspector:
             return data
         except Exception as e:
             ExceptionInfo(e)
-
-
-import os
-import shutil
-import zipfile
 
 
 class File:
@@ -239,9 +252,6 @@ class File:
             return False
 
 
-import json
-
-
 def read_json(path):
     """读取交易参数"""
     try:
@@ -262,11 +272,31 @@ def modify_json(path, data):
         ExceptionInfo(e)
         return False
 
+
 def isin(sub, collection):
     if isinstance(sub, list):
         return set(sub) <= set(collection)
     else:
         return sub in collection
+
+
+def page_diff(page1, page2):
+    """
+    计算两个页面的相似程度
+    :param page1: 页面1的xml字符串
+    :param page2: 页面2的xml字符串
+    :return: ratio
+    """
+    try:
+        if not isinstance(page1, str) or not isinstance(page2, str):
+            raise TypeError('page1 and page2 must be a string')
+        else:
+            return difflib.SequenceMatcher(None, page1, page2).ratio()
+        pass
+    except Exception as e:
+        ExceptionInfo(e)
+        return 0
+
 
 # print(isin(1, ['a', 'b', 'c']))
 class logger:
